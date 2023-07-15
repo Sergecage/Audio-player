@@ -1,0 +1,23 @@
+*, *:before, *:after {
+    box-sizing: border-box;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 1440px;
+    background: #FFFFFF;
+}
+
+header{
+    height: 90px;
+    width: inherit;
+    background-color: #0C0C0E;
+    h1{
+        width: 294px;
+        height: 50px;
+        position: relative;
+        top: 20px;
+        left: 20px;
+    }
+}
