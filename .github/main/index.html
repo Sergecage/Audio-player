@@ -3,7 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Forum&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Forum&family=Inter:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Forum&family=Inter&display=swap" rel="stylesheet">
     <title>Library</title>
+    <link rel="stylesheet" href="style/style.css">
 </head>
 <body>
     <header>
@@ -14,15 +20,125 @@
             <li><a>Coffee shop</a></li>
             <li><a>Contacts</a></li>
             <li><a>Library card</a></li>
-            <li><a><img></a></li>
+            <li></li>
         </ul></nav>
+        <a class="icon-log"><img src="images/icons/icon_profile.svg" alt="logIn"></a>
     </header>
 
     <main>
-        <section><h2></h2></section>
-        <section><h2></h2></section>
-        <section><h2></h2></section>
-        <section><h2></h2></section>
+        <section class="welcome">
+            <div class="welcome-black"><h2>Welcome to the Brooklyn Library</h2></div>
+        </section>
+
+        <section class="about">
+            <div class="about-title"><h2>About</h2>
+            <hr>
+        </div>
+        <h3>The Brooklyn Library is a free workspace, a large number of books and 
+            a cozy coffee shop inside</h3>
+            <div class="about-container">
+                <img src="images/image 1.svg" alt="sample image">
+                <img src="images/image 2.svg" alt="sample image2">
+                <img src="images/image 3.svg" alt="sample image3">
+            </div>
+            <div class="about-button">
+                <button type="radio" class="about-slider" checked></button>
+                <button type="radio" class="about-slider" ></button>
+                <button type="radio" class="about-slider" ></button>
+            </div>
+        </section>
+
+        <section class="favorite">
+            <div class="about-title"><h2>About</h2>
+                <hr>
+            </div>
+                <h4>Pick favorite of season</h4>
+            <div class="pick">
+                <input type="radio" class="season" checked><label>Winter</label>
+                <input type="radio" class="season" ><label>Spring</label>
+                <input type="radio" class="season" ><label>Summer</label>
+                <input type="radio" class="season" ><label>Autumn</label>
+            </div>
+            <div class="favorites-items">
+                <div class="item">
+                    <h5>Staff Picks</h5>
+                    <hr>
+                    <h4>THE BOOK EATERS</h4>
+                    <h6>y Sunyi Dean</h6>
+                    <p>An unusual sci-fi story about a book eater woman who tries desperately 
+                        to save her dangerous mind-eater son from tradition and certain death. 
+                        Complete with dysfunctional family values, light Sapphic romance, and a strong,
+                         complex protagonist. Not for the faint of heart.</p>
+                         <button>Buy</button>
+                         <img>
+                </div>
+                <div class="item">
+                    <h5>Staff Picks</h5>
+                    <hr>
+                    <h4>THE BOOK EATERS</h4>
+                    <h6>y Sunyi Dean</h6>
+                    <p>An unusual sci-fi story about a book eater woman who tries desperately 
+                        to save her dangerous mind-eater son from tradition and certain death. 
+                        Complete with dysfunctional family values, light Sapphic romance, and a strong,
+                         complex protagonist. Not for the faint of heart.</p>
+                         <button>Buy</button>
+                         <img src="images/pictures/book.svg" alt="book">
+                </div>
+                <div class="item">
+                    <h5>Staff Picks</h5>
+                    <hr>
+                    <h4>THE BOOK EATERS</h4>
+                    <h6>y Sunyi Dean</h6>
+                    <p>An unusual sci-fi story about a book eater woman who tries desperately 
+                        to save her dangerous mind-eater son from tradition and certain death. 
+                        Complete with dysfunctional family values, light Sapphic romance, and a strong,
+                         complex protagonist. Not for the faint of heart.</p>
+                         <button>Buy</button>
+                         <img>
+                </div>
+                <div class="item">
+                    <h5>Staff Picks</h5>
+                    <hr>
+                    <h4>THE BOOK EATERS</h4>
+                    <h6>y Sunyi Dean</h6>
+                    <p>An unusual sci-fi story about a book eater woman who tries desperately 
+                        to save her dangerous mind-eater son from tradition and certain death. 
+                        Complete with dysfunctional family values, light Sapphic romance, and a strong,
+                         complex protagonist. Not for the faint of heart.</p>
+                         <button>Own</button>
+                         <img>
+                </div>
+
+            </div>
+        </section>
+
+        <section class="CoffeShop">
+            <div class="about-title"><h2>Coffee Shop</h2>
+                <hr>
+            </div>
+            <p>In our library, we have of cozy coffee shop, welcoming in customers with frothy 
+                cappuccinos and friendly conversation. you can get a favorite book and read in coffee 
+                shop. Our barista to cook you best coffee, and also you can try desserts from bakery.
+            </p>
+            <div class="coffee-container">
+                <ul class="coffee-tea">
+                    <li>Cold Brew Coffee <hr> $3</li>
+                    <li>French Press Pot <hr> $5</li>
+                    <li>Espresso <hr> $2</li>
+                    <li>Cappucino <hr> $4</li>
+                    <li>Hot Tea <hr> $2</li>
+                    <li>Cold Tea <hr> $2</li>
+                </ul>
+                <ul class="coffee-tea-desserts">
+                    <li>Forest Gateau <hr> $16</li>
+                    <li>Blue Moon <hr> $16</li>
+                    <li>Truffle Cake <hr> $15</li>
+                    <li>Chocolate Cake <hr> $18</li>
+                    <li>Poet's Dream Cake <hr> $16</li>
+                    <li>Pineapple Cake <hr> $14</li>
+                </ul>
+            </div>
+        </section>
         <section><h2></h2></section>
         <section><h2></h2>
             <form>

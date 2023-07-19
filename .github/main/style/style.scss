@@ -19,5 +19,291 @@ header{
         position: relative;
         top: 20px;
         left: 20px;
+        color: #FFF;
+        text-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+        font-family: 'Forum', 'cursive';
+        font-size: 30px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 50px;
+        letter-spacing: 0.6px;
+    }
+    nav{
+        display: inline-flex;
+        align-items: flex-start;
+        gap: 30px;
+        width: 584px;
+        height: 50px;
+        top: 20px;
+        left: 768px;
+        li{
+            width: auto;
+            a{
+                text-decoration: none;
+                color: #FFF;
+                font-family: "Inter", 'cursive';
+                font-size: 20px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 50px;
+                &:hover{
+                    cursor: pointer;
+                    opacity: 0.1;
+                }
+            }
+        }
+    }
+    .icon-log{
+        width: 28px;
+        height: 28px;
+        flex-shrink: 0;
+        top: 31px;
+        left: 1392px;
+        &:hover{
+            cursor: pointer;
+            opacity: 0.1;
+        }
+    }
+}
+
+main{
+    width: 1440px;
+    height: auto;
+    .welcome{
+        width: inherit;
+        top: 90px;
+        height: 600px;
+        background: url(images/pictures/Welcome.svg);
+        .welcome-black{
+            display: flex;
+            width: 600px;
+            height: 220px;
+            justify-content: center;
+            align-items: center;
+            flex-shrink: 0;
+            top: 220px;
+            background: #0C0C0E;
+            h2{
+                width: 520px;
+                color: #FFF;
+                text-align: center;
+                font-family: "Forum",'cursive';
+                font-size: 40px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 50px;
+                flex-shrink: 0;
+                letter-spacing: 3px;
+                text-transform: uppercase;
+            }
+        }
+    }
+    .about{
+        width: 1440px;
+        height: 837px;
+        background: #FFF;
+        .about-title{
+            width: 106px;
+            height: 61px;
+            flex-shrink: 0;
+            h2{
+                width: 106px;
+                height: 40px;
+                color: #0C0C0E;
+                font-family: 'Forum', 'cursive';
+                font-size: 40px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 40px;
+            }
+            hr{
+                width: 50px;
+                height: 1px;
+                flex-shrink: 0;
+                background: #0C0C0E;
+                top: 60px;
+            }
+        }
+        h3{
+            color: #000;
+            text-align: center;
+            font-family: 'Inter', 'cursive', 'sans-serif';
+            font-size: 20px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 40px;
+            width: 1440px;
+            height: 40px;
+        }
+        .about-container{
+            width: 1400px;
+            height: 560px;
+            margin: 181px 20px 96px 20px;
+            display: flex;
+            align-items: flex-start;
+            gap: 25px;
+            img{
+                width: 450px;
+                height: 560px;
+                flex-shrink: 0;
+            }
+        }
+        .about-button{
+            width: 68px;
+            height: 16px;
+            margin: 781px 686px 40px 686px;
+            display: flex;
+            align-items: flex-start;
+            gap: 4.5px;
+            .abot-slider{
+                border: 50px;
+                height: 16px;
+                width: 18.16px;
+                color: #0C0C0E;
+                &:checked{
+                    color: #BB945F;
+                }
+            }
+        }
+    }
+    .favorite{
+        width: 1440px;
+        height: 1439px;
+        top: 1527px;
+        .about-title{
+            width: 160px;
+            h2{
+                width: 106px;
+            }
+        }
+        h4{
+            width: 234px;
+            height: 24px;
+            color: #000;
+            text-align: center;
+            font-family: 'Inter', 'cursive';
+            font-size: 20px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: normal;
+        }
+        .pick{
+            width: 700px;
+            height: 24px;
+            display: flex;
+            flex-shrink: 0;
+            margin:185px 720px 0px 20px;
+            input{
+                width: 17px;
+                height: 17px;
+                flex-shrink: 0;
+            }
+            label{
+                color: #000;
+                font-family: 'Inter', 'cursive';
+                font-size: 20px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: normal;
+                margin-left: 20px;
+            }
+        }
+        .favorites-items{
+            width: 1400px;
+            height: 1150px;
+            margin: 249px 20px 40px 20px;
+            display: flex;
+            border: 2px solid rgba(255,255,255,0.5);
+            .item{
+                width: 590px;
+                height: 555px;
+                flex-shrink: 0;
+                h5{
+                    width: 102px;
+                    height: 40px;
+                    margin: 15px 428px 500px 20px;
+                }
+                hr{
+                    width: 60px;
+                    height: 1px;
+                    background: #BB945F;
+                }
+                h4, h6{
+                    color: #000;
+                    font-family: 'Inter', 'cursive', sans-serif;
+                    font-size: 15px;
+                    font-style: normal;
+                    font-weight: 700;
+                    line-height: 40px;
+                    letter-spacing: 2px;
+                }
+                h4{
+                    margin: 75px 362px 400px 20px;
+                    width: 168px;
+                    height: 40px;
+                }
+                h6{
+                    width: 148px;
+                    height: 40px;
+                    margin: 115px 362px 400px 20px;
+                }
+                p{
+                    width: 355px;
+                    height: 320px;
+                    color: #000;
+                    font-family: 'Inter', 'cursive';
+                    font-size: 15px;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: 40px;
+                    letter-spacing: 2px;
+                    text-transform: capitalize;
+                    button{
+                        width: 75px;
+                        height: 30px;
+                        flex-shrink: 0;
+                        margin: 510px 495px 15px 20px;
+                    }
+                    img{
+                        width: 200px;
+                        height: 300px;
+                        flex-shrink: 0;
+                        top: 255px;
+                        left: 390px;
+                        position: relative;
+                    }
+                }
+            }
+        }
+    }
+    .CoffeShop{
+        display: flex;
+        width: 1440px;
+        height: 781px;
+        padding: 20px 20px 40px 20px;
+        flex-direction: column;
+        align-items: center;
+        gap: 40px;  
+        .about-title{
+            width: 220px;
+            h2{
+                width: 220px;
+            }
+        }
+        p{
+            width: 1400px;
+            height: 120px;
+            color: #000;
+            text-align: center;
+            font-family: 'Inter', 'cursive';
+            font-size: 20px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 40px;
+            letter-spacing: 2px;
+            text-transform: capitalize;
+            top: 60px;
+            left: 20px;
+        }
     }
 }
