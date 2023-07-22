@@ -31,6 +31,13 @@ header h1 {
   letter-spacing: 0.6px;
 }
 header nav {
+  width: 604px;
+  height: 50px;
+  left: 768px;
+  top: -40px;
+  position: relative;
+}
+header nav ul {
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
@@ -38,15 +45,12 @@ header nav {
       -ms-flex-align: start;
           align-items: flex-start;
   gap: 30px;
-  width: 584px;
+  padding: 0;
+  margin: 0;
   height: 50px;
-  top: 20px;
-  left: 768px;
+  list-style: none;
 }
-header nav li {
-  width: auto;
-}
-header nav li a {
+header nav ul li a {
   text-decoration: none;
   color: #FFF;
   font-family: "Inter", "cursive";
@@ -55,16 +59,17 @@ header nav li a {
   font-weight: 400;
   line-height: 50px;
 }
-header nav li a:hover {
+header nav ul li a:hover {
   cursor: pointer;
   opacity: 0.1;
 }
 header .icon-log {
+  position: relative;
   width: 28px;
   height: 28px;
   -ms-flex-negative: 0;
       flex-shrink: 0;
-  top: 31px;
+  top: -81px;
   left: 1392px;
 }
 header .icon-log:hover {
@@ -347,4 +352,339 @@ main .CoffeShop p {
   text-transform: capitalize;
   top: 60px;
   left: 20px;
+}
+main .CoffeShop .coffee-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 1440px;
+  padding: 20px 20px 40px 20px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 40px;
+}
+main .CoffeShop .coffee-container .coffee-tea, main .CoffeShop .coffee-container .-desserts {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  gap: 40px;
+  color: #BB945F;
+}
+main .CoffeShop .coffee-container .coffee-tea li, main .CoffeShop .coffee-container .-desserts li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 60px;
+  color: #000000;
+}
+main .contacts {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 1440px;
+  padding: 20px 20px 40px 20px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 40px;
+}
+main .contacts .about-title {
+  width: 240px;
+  top: 20px;
+}
+main .contacts .contacts-links {
+  width: 503px;
+  height: 380px;
+}
+main .contacts .contacts-links h5, main .contacts .contacts-links a, main .contacts .contacts-links h6 {
+  color: #000;
+  text-align: center;
+  font-family: "Inter", "cursive";
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 40px;
+  letter-spacing: 2px;
+  text-transform: capitalize;
+}
+main .contacts .contacts-links a {
+  font-weight: 400;
+}
+main .contacts .contacts-links h6 span {
+  font-weight: 400;
+}
+main .contacts img {
+  width: 696px;
+  height: 414px;
+  top: 121px;
+  left: 201px;
+}
+main .LibraryCard {
+  width: 1440px;
+  height: 614px;
+  top: 4382px;
+}
+main .LibraryCard .about-title {
+  width: 372px;
+  top: 20px;
+}
+main .LibraryCard h3 {
+  color: #000;
+  font-family: "Inter", "cursive", sans-serif;
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: 0.6px;
+  width: 324px;
+  height: 36px;
+  top: 121px;
+  left: 158px;
+}
+main .LibraryCard .form-block {
+  width: 600px;
+  height: 386px;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  border: 3px solid #BB945F;
+  background: #FFF;
+}
+main .LibraryCard .form-block form {
+  width: 560px;
+  height: 272px;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  background: #BB945F;
+  position: relative;
+  top: 20px;
+  left: 20px;
+}
+main .LibraryCard .form-block form label {
+  color: #000;
+  font-family: "Forum", "cursive", "sans-serif";
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 50px;
+  letter-spacing: 0.6px;
+  top: 20px;
+  left: 20px;
+}
+main .LibraryCard .form-block form input {
+  width: 520px;
+  height: 66px;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  border-radius: 10px;
+  background: #FFF;
+  left: 20px;
+}
+main .LibraryCard .form-block form input:nth-child(2) {
+  top: 181px;
+}
+main .LibraryCard .form-block form button {
+  width: 162px;
+  height: 24px;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  padding: 10px 40px;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  border-radius: 2px;
+  border: 1px solid #0C0C0E;
+}
+main .LibraryCard .get-a-card {
+  width: 456px;
+  height: 253px;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  top: 121px;
+  left: 964px;
+}
+main .LibraryCard .get-a-card h4 {
+  width: 220px;
+  height: 33px;
+  color: #000;
+  text-align: center;
+  font-family: "Forum", "cursive", sans-serif;
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: 0.6px;
+}
+main .LibraryCard .get-a-card p {
+  width: 456px;
+  color: #000;
+  text-align: right;
+  font-family: "Inter", "cursive";
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 40px;
+  letter-spacing: 0.4px;
+  top: 40px;
+}
+main .LibraryCard .get-a-card button {
+  width: 75px;
+  height: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 75px;
+  height: 30px;
+  padding: 10px 0px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  border-radius: 2px;
+  border: 1px solid #0C0C0E;
+  top: 211px;
+  left: 350px;
+}
+main .LibraryCard .get-a-card button:nth-child(2) {
+  left: 420px;
+}
+
+footer {
+  width: 1440px;
+  height: 614px;
+  background: #0C0C0E;
+}
+footer a {
+  width: 229px;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  height: 40px;
+  top: 20px;
+  text-decoration: none;
+  color: #FFFFFF;
+}
+footer ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 102px;
+  height: 24px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  gap: 15px;
+  left: 21px;
+  top: 78px;
+}
+footer ul a {
+  text-decoration: none;
+  color: #FFFFFF;
+  width: 24px;
+  height: 24px;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+}
+footer .schedule {
+  width: 149px;
+  height: 90px;
+  top: 20px;
+  left: 1271px;
+}
+footer .schedule p {
+  height: 40px;
+  width: 149px;
+  color: #FFF;
+  text-align: right;
+  font-family: "Inter", "cursive";
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 400;
+}
+footer .schedule p:nth-child(2) {
+  top: 50px;
+}
+footer hr {
+  width: 1400px;
+  height: 1px;
+  background: #FFF;
+  top: 140px;
+  left: 20px;
+}
+footer h4 {
+  width: 56px;
+  height: 20px;
+  color: #FFF;
+  text-align: center;
+  font-family: "Inter", "cursive";
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
+  letter-spacing: 2px;
+  top: 186px;
+  left: 20px;
+}
+footer h3 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 300px;
+  height: 22px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  color: #FFF;
+  text-align: center;
+  font-family: "Inter", "cursive";
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
+  letter-spacing: 2px;
+  top: 184px;
+  left: 570px;
+}
+footer .name {
+  width: 260px;
+  height: 50px;
+  top: 180px;
+  left: 1200px;
 }
