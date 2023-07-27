@@ -718,11 +718,12 @@ main .LibraryCard .get-a-card {
   height: 253px;
   -ms-flex-negative: 0;
       flex-shrink: 0;
-  top: 121px;
+  top: -420px;
   left: 964px;
+  position: relative;
 }
 main .LibraryCard .get-a-card h4 {
-  width: 220px;
+  width: 240px;
   height: 33px;
   color: #000;
   text-align: center;
@@ -732,6 +733,9 @@ main .LibraryCard .get-a-card h4 {
   font-weight: 400;
   line-height: normal;
   letter-spacing: 0.6px;
+  margin: 0;
+  position: relative;
+  left: 220px;
 }
 main .LibraryCard .get-a-card p {
   width: 456px;
@@ -745,9 +749,14 @@ main .LibraryCard .get-a-card p {
   letter-spacing: 0.4px;
   top: 40px;
 }
-main .LibraryCard .get-a-card button {
-  width: 75px;
-  height: 10px;
+main .LibraryCard .get-a-card .signlog {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 20px;
+  margin-left: 284px;
+}
+main .LibraryCard .get-a-card .signlog button {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -764,26 +773,35 @@ main .LibraryCard .get-a-card button {
       flex-shrink: 0;
   border-radius: 2px;
   border: 1px solid #0C0C0E;
-  top: 211px;
-  left: 350px;
-}
-main .LibraryCard .get-a-card button:nth-child(2) {
-  left: 420px;
+  top: 11px;
+  position: relative;
+  color: #0C0C0E;
+  text-align: center;
+  font-family: "Inter", "cursive";
+  font-size: 10px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: 1px;
 }
 
 footer {
   width: 1440px;
   height: 614px;
   background: #0C0C0E;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 footer a {
   width: 229px;
   -ms-flex-negative: 0;
       flex-shrink: 0;
   height: 40px;
-  top: 20px;
+  margin-top: 20px;
   text-decoration: none;
   color: #FFFFFF;
+  margin-left: 20px;
 }
 footer ul {
   display: -webkit-box;
@@ -798,8 +816,10 @@ footer ul {
       -ms-flex-align: start;
           align-items: flex-start;
   gap: 15px;
-  left: 21px;
-  top: 78px;
+  position: relative;
+  top: 48px;
+  list-style: none;
+  left: -240px;
 }
 footer ul a {
   text-decoration: none;
