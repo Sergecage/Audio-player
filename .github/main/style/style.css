@@ -61,7 +61,7 @@ header nav ul li a {
 }
 header nav ul li a:hover {
   cursor: pointer;
-  opacity: 0.1;
+  color: #BB945F;
 }
 header .icon-log {
   position: relative;
@@ -74,7 +74,7 @@ header .icon-log {
 }
 header .icon-log:hover {
   cursor: pointer;
-  opacity: 0.1;
+  opacity: 0.5;
 }
 
 main {
@@ -85,7 +85,7 @@ main .welcome {
   width: inherit;
   top: 90px;
   height: 600px;
-  background: url(images/pictures/Welcome.svg);
+  background: url(../images/pictures/Welcome.svg);
 }
 main .welcome .welcome-black {
   display: -webkit-box;
@@ -103,6 +103,7 @@ main .welcome .welcome-black {
       flex-shrink: 0;
   top: 220px;
   background: #0C0C0E;
+  position: relative;
 }
 main .welcome .welcome-black h2 {
   width: 520px;
@@ -128,6 +129,8 @@ main .about .about-title {
   height: 61px;
   -ms-flex-negative: 0;
       flex-shrink: 0;
+  position: relative;
+  left: 667px;
 }
 main .about .about-title h2 {
   width: 106px;
@@ -157,11 +160,12 @@ main .about h3 {
   line-height: 40px;
   width: 1440px;
   height: 40px;
+  margin-top: 40px;
 }
 main .about .about-container {
   width: 1400px;
   height: 560px;
-  margin: 181px 20px 96px 20px;
+  margin: 20px 20px 96px 20px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -170,16 +174,23 @@ main .about .about-container {
           align-items: flex-start;
   gap: 25px;
 }
-main .about .about-container img {
+main .about .about-container .image {
   width: 450px;
   height: 560px;
   -ms-flex-negative: 0;
       flex-shrink: 0;
+  background: url(../images/pictures/image\ 1.svg);
+}
+main .about .about-container .image:nth-child(2) {
+  background: url(../images/pictures/image\ 2.svg);
+}
+main .about .about-container .image:nth-child(3) {
+  background: url(../images/pictures/image\ 3.svg);
 }
 main .about .about-button {
   width: 68px;
   height: 16px;
-  margin: 781px 686px 40px 686px;
+  margin: 40px 686px 40px 686px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -188,14 +199,19 @@ main .about .about-button {
           align-items: flex-start;
   gap: 4.5px;
 }
-main .about .about-button .abot-slider {
+main .about .about-button .about-slider {
   border: 50px;
   height: 16px;
   width: 18.16px;
-  color: #0C0C0E;
+  background: #0C0C0E;
+  border-radius: 50px;
 }
-main .about .about-button .abot-slider:checked {
-  color: #BB945F;
+main .about .about-button .about-slider:checked {
+  background: #BB945F;
+}
+main .about .about-button .about-slider:hover {
+  background: #BB945F;
+  cursor: pointer;
 }
 main .favorite {
   width: 1440px;
@@ -203,10 +219,30 @@ main .favorite {
   top: 1527px;
 }
 main .favorite .about-title {
-  width: 160px;
+  width: 106px;
+  height: 61px;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  position: relative;
+  left: 667px;
 }
 main .favorite .about-title h2 {
   width: 106px;
+  height: 40px;
+  color: #0C0C0E;
+  font-family: "Forum", "cursive";
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 40px;
+}
+main .favorite .about-title hr {
+  width: 50px;
+  height: 1px;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  background: #0C0C0E;
+  top: 60px;
 }
 main .favorite h4 {
   width: 234px;
@@ -227,13 +263,19 @@ main .favorite .pick {
   display: flex;
   -ms-flex-negative: 0;
       flex-shrink: 0;
-  margin: 185px 720px 0px 20px;
+  margin: 40px 720px 0px 20px;
 }
 main .favorite .pick input {
   width: 17px;
   height: 17px;
   -ms-flex-negative: 0;
       flex-shrink: 0;
+  background: #000;
+  color: #000;
+  margin-left: 90px;
+}
+main .favorite .pick input:first-child {
+  margin: 0;
 }
 main .favorite .pick label {
   color: #000;
@@ -247,27 +289,39 @@ main .favorite .pick label {
 main .favorite .favorites-items {
   width: 1400px;
   height: 1150px;
-  margin: 249px 20px 40px 20px;
+  margin: 40px 20px 40px 20px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  border: 2px solid rgba(255, 255, 255, 0.5);
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 200px;
 }
 main .favorite .favorites-items .item {
   width: 590px;
   height: 555px;
   -ms-flex-negative: 0;
       flex-shrink: 0;
+  border: 2px solid rgba(0, 0, 0, 0.5);
 }
 main .favorite .favorites-items .item h5 {
   width: 102px;
   height: 40px;
   margin: 15px 428px 500px 20px;
+  color: #000;
+  font-family: "Forum", "cursive";
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 40px;
 }
 main .favorite .favorites-items .item hr {
   width: 60px;
   height: 1px;
   background: #BB945F;
+  position: relative;
+  top: -497px;
+  left: -242px;
 }
 main .favorite .favorites-items .item h4, main .favorite .favorites-items .item h6 {
   color: #000;
@@ -277,16 +331,23 @@ main .favorite .favorites-items .item h4, main .favorite .favorites-items .item 
   font-weight: 700;
   line-height: 40px;
   letter-spacing: 2px;
+  position: relative;
+  width: 355px;
 }
 main .favorite .favorites-items .item h4 {
-  margin: 75px 362px 400px 20px;
-  width: 168px;
   height: 40px;
+  left: -80px;
+  top: -477px;
+  -webkit-box-align: left;
+      -ms-flex-align: left;
+          align-items: left;
+  margin: 0;
 }
 main .favorite .favorites-items .item h6 {
-  width: 148px;
   height: 40px;
-  margin: 115px 362px 400px 20px;
+  top: -477px;
+  left: 20px;
+  margin: 0;
 }
 main .favorite .favorites-items .item p {
   width: 355px;
@@ -299,22 +360,31 @@ main .favorite .favorites-items .item p {
   line-height: 40px;
   letter-spacing: 2px;
   text-transform: capitalize;
+  margin: 20px 20px 15px 15px;
+  position: relative;
+  top: -485px;
 }
-main .favorite .favorites-items .item p button {
+main .favorite .favorites-items .item button {
   width: 75px;
   height: 30px;
   -ms-flex-negative: 0;
       flex-shrink: 0;
-  margin: 510px 495px 15px 20px;
+  margin: 24px 15px 15px 20px;
+  position: relative;
+  top: -780px;
 }
-main .favorite .favorites-items .item p img {
+main .favorite .favorites-items .item button:hover {
+  cursor: pointer;
+}
+main .favorite .favorites-items .item img {
   width: 200px;
   height: 300px;
   -ms-flex-negative: 0;
       flex-shrink: 0;
-  top: 255px;
-  left: 390px;
+  left: 330px;
+  top: -746px;
   position: relative;
+  background: url(../images/pictures/book.svg);
 }
 main .CoffeShop {
   display: -webkit-box;
@@ -331,12 +401,28 @@ main .CoffeShop {
       -ms-flex-align: center;
           align-items: center;
   gap: 40px;
+  margin-top: 100px;
 }
 main .CoffeShop .about-title {
-  width: 220px;
+  width: 240px;
 }
 main .CoffeShop .about-title h2 {
-  width: 220px;
+  width: 240px;
+  color: #0C0C0E;
+  font-family: "Forum", "cursive";
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 40px;
+  letter-spacing: 2px;
+  text-transform: capitalize;
+  margin: 0;
+}
+main .CoffeShop .about-title hr {
+  width: 50px;
+  height: 1px;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
 }
 main .CoffeShop p {
   width: 1400px;
@@ -357,18 +443,14 @@ main .CoffeShop .coffee-container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  width: 1440px;
-  padding: 20px 20px 40px 20px;
-  -webkit-box-orient: vertical;
+  -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  gap: 40px;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  gap: 420px;
+  height: 520px;
 }
-main .CoffeShop .coffee-container .coffee-tea, main .CoffeShop .coffee-container .-desserts {
+main .CoffeShop .coffee-container .coffee-tea {
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
@@ -376,34 +458,60 @@ main .CoffeShop .coffee-container .coffee-tea, main .CoffeShop .coffee-container
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
   gap: 40px;
   color: #BB945F;
+  font-family: "Forum", "cursive";
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 40px;
+  letter-spacing: 2px;
+  text-transform: capitalize;
+  margin: 0;
+  padding: 0;
+  margin-left: 20px;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  list-style-type: none;
 }
-main .CoffeShop .coffee-container .coffee-tea li, main .CoffeShop .coffee-container .-desserts li {
+main .CoffeShop .coffee-container .coffee-tea li {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  gap: 60px;
+  -webkit-box-flex: 2;
+      -ms-flex: 2;
+          flex: 2;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  gap: 60px;
   color: #000000;
+  font-family: "Inter", "cursive";
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 40px;
+  letter-spacing: 2px;
+  text-transform: capitalize;
+  width: 478px;
+}
+main .CoffeShop .coffee-container .coffee-tea li hr {
+  width: 100px;
+  height: 1px;
+  background: #BB945F;
 }
 main .contacts {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   width: 1440px;
-  padding: 20px 20px 40px 20px;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -412,33 +520,73 @@ main .contacts {
       -ms-flex-align: center;
           align-items: center;
   gap: 40px;
+  margin-top: 70px;
+  height: 575px;
 }
 main .contacts .about-title {
-  width: 240px;
-  top: 20px;
+  width: 260px;
+}
+main .contacts .about-title h2 {
+  color: #0C0C0E;
+  font-family: "Forum", "cursive";
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 40px;
+  letter-spacing: 2px;
+  text-transform: capitalize;
+  margin: 0;
+}
+main .contacts .about-title hr {
+  width: 50px;
+  height: 1px;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
 }
 main .contacts .contacts-links {
-  width: 503px;
-  height: 380px;
+  width: 1400px;
+  height: 414px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  gap: 201px;
 }
-main .contacts .contacts-links h5, main .contacts .contacts-links a, main .contacts .contacts-links h6 {
+main .contacts .contacts-links .numbers {
+  width: 503px;
+}
+main .contacts .contacts-links .numbers h5, main .contacts .contacts-links .numbers a, main .contacts .contacts-links .numbers h6 {
   color: #000;
   text-align: center;
   font-family: "Inter", "cursive";
   font-size: 20px;
   font-style: normal;
-  font-weight: 700;
   line-height: 40px;
   letter-spacing: 2px;
   text-transform: capitalize;
+  margin-bottom: 20px;
+  margin-top: 0;
 }
-main .contacts .contacts-links a {
+main .contacts .contacts-links .numbers a {
+  font-weight: 400;
+  text-decoration: none;
+}
+main .contacts .contacts-links .numbers h6 {
+  text-align: left;
+}
+main .contacts .contacts-links .numbers h6 span {
   font-weight: 400;
 }
-main .contacts .contacts-links h6 span {
-  font-weight: 400;
+main .contacts .contacts-links .numbers h5 {
+  text-align: left;
+  font-weight: 700;
 }
-main .contacts img {
+main .contacts .contacts-links img {
   width: 696px;
   height: 414px;
   top: 121px;
@@ -452,6 +600,26 @@ main .LibraryCard {
 main .LibraryCard .about-title {
   width: 372px;
   top: 20px;
+  position: relative;
+  left: 534px;
+}
+main .LibraryCard .about-title h2 {
+  color: #0C0C0E;
+  font-family: "Forum", "cursive";
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 40px;
+  letter-spacing: 2px;
+  text-transform: capitalize;
+  margin: 0;
+  width: 382px;
+}
+main .LibraryCard .about-title hr {
+  width: 50px;
+  height: 1px;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
 }
 main .LibraryCard h3 {
   color: #000;
@@ -461,10 +629,12 @@ main .LibraryCard h3 {
   font-weight: 400;
   line-height: normal;
   letter-spacing: 0.6px;
-  width: 324px;
+  width: auto;
   height: 36px;
-  top: 121px;
+  top: 52px;
   left: 158px;
+  position: relative;
+  margin: 0;
 }
 main .LibraryCard .form-block {
   width: 600px;
@@ -473,6 +643,8 @@ main .LibraryCard .form-block {
       flex-shrink: 0;
   border: 3px solid #BB945F;
   background: #FFF;
+  margin-top: 60px;
+  margin-left: 20px;
 }
 main .LibraryCard .form-block form {
   width: 560px;
@@ -494,6 +666,7 @@ main .LibraryCard .form-block form label {
   letter-spacing: 0.6px;
   top: 20px;
   left: 20px;
+  position: relative;
 }
 main .LibraryCard .form-block form input {
   width: 520px;
@@ -503,22 +676,42 @@ main .LibraryCard .form-block form input {
   border-radius: 10px;
   background: #FFF;
   left: 20px;
+  position: relative;
+  margin-top: 20px;
+  border: #FFF;
+  color: #8E8E8E;
+  font-family: "Forum", "cursive";
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 50px;
+  letter-spacing: 0.6px;
+  padding: 8px 318px 8px 20px;
 }
 main .LibraryCard .form-block form input:nth-child(2) {
-  top: 181px;
+  margin-top: 25px;
 }
-main .LibraryCard .form-block form button {
-  width: 162px;
-  height: 24px;
+main .LibraryCard .form-block button {
+  width: 242px;
+  height: 44px;
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
-  padding: 10px 40px;
   -webkit-box-align: end;
       -ms-flex-align: end;
           align-items: flex-end;
   border-radius: 2px;
   border: 1px solid #0C0C0E;
+  margin: 45px 170px 30px 179px;
+  color: #0C0C0E;
+  text-align: center;
+  font-family: "Inter", "cursive";
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: 1px;
+  padding: 10px 38px 10px 38px;
 }
 main .LibraryCard .get-a-card {
   width: 456px;

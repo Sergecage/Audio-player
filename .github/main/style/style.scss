@@ -53,7 +53,7 @@ header{
                     line-height: 50px;
                     &:hover{
                         cursor: pointer;
-                        opacity: 0.1;
+                        color: #BB945F;
                     }
                 }
             }
@@ -68,7 +68,7 @@ header{
         left: 1392px;
         &:hover{
             cursor: pointer;
-            opacity: 0.1;
+            opacity: 0.5;
         }
     }
 }
@@ -80,7 +80,7 @@ main{
         width: inherit;
         top: 90px;
         height: 600px;
-        background: url(images/pictures/Welcome.svg);
+        background: url(../images/pictures/Welcome.svg);
         .welcome-black{
             display: flex;
             width: 600px;
@@ -90,6 +90,7 @@ main{
             flex-shrink: 0;
             top: 220px;
             background: #0C0C0E;
+            position: relative;
             h2{
                 width: 520px;
                 color: #FFF;
@@ -113,6 +114,8 @@ main{
             width: 106px;
             height: 61px;
             flex-shrink: 0;
+            position: relative;
+            left: 667px;
             h2{
                 width: 106px;
                 height: 40px;
@@ -141,34 +144,47 @@ main{
             line-height: 40px;
             width: 1440px;
             height: 40px;
+            margin-top: 40px;
         }
         .about-container{
             width: 1400px;
             height: 560px;
-            margin: 181px 20px 96px 20px;
+            margin: 20px 20px 96px 20px;
             display: flex;
             align-items: flex-start;
             gap: 25px;
-            img{
+            .image{
                 width: 450px;
                 height: 560px;
                 flex-shrink: 0;
+                background: url(../images/pictures/image\ 1.svg);
+                &:nth-child(2){
+                    background: url(../images/pictures/image\ 2.svg);
+                }
+                &:nth-child(3){
+                    background: url(../images/pictures/image\ 3.svg);
+                }
             }
         }
         .about-button{
             width: 68px;
             height: 16px;
-            margin: 781px 686px 40px 686px;
+            margin: 40px 686px 40px 686px;
             display: flex;
             align-items: flex-start;
             gap: 4.5px;
-            .abot-slider{
+            .about-slider{
                 border: 50px;
                 height: 16px;
                 width: 18.16px;
-                color: #0C0C0E;
+                background: #0C0C0E;
+                border-radius: 50px;
                 &:checked{
-                    color: #BB945F;
+                    background: #BB945F;
+                }
+                &:hover{
+                    background: #BB945F;
+                    cursor: pointer;
                 }
             }
         }
@@ -178,9 +194,27 @@ main{
         height: 1439px;
         top: 1527px;
         .about-title{
-            width: 160px;
+            width: 106px;
+            height: 61px;
+            flex-shrink: 0;
+            position: relative;
+            left: 667px;
             h2{
                 width: 106px;
+                height: 40px;
+                color: #0C0C0E;
+                font-family: 'Forum', 'cursive';
+                font-size: 40px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 40px;
+            }
+            hr{
+                width: 50px;
+                height: 1px;
+                flex-shrink: 0;
+                background: #0C0C0E;
+                top: 60px;
             }
         }
         h4{
@@ -199,11 +233,17 @@ main{
             height: 24px;
             display: flex;
             flex-shrink: 0;
-            margin:185px 720px 0px 20px;
+            margin:40px 720px 0px 20px;
             input{
                 width: 17px;
                 height: 17px;
                 flex-shrink: 0;
+                background: #000;
+                color: #000;
+                margin-left: 90px;
+                &:first-child{
+                    margin: 0;
+                }
             }
             label{
                 color: #000;
@@ -218,22 +258,33 @@ main{
         .favorites-items{
             width: 1400px;
             height: 1150px;
-            margin: 249px 20px 40px 20px;
+            margin: 40px 20px 40px 20px;
             display: flex;
-            border: 2px solid rgba(255,255,255,0.5);
+            flex-wrap: wrap;
+            gap: 200px;
             .item{
                 width: 590px;
                 height: 555px;
                 flex-shrink: 0;
+                border: 2px solid rgba(0, 0, 0, 0.5);
                 h5{
                     width: 102px;
                     height: 40px;
                     margin: 15px 428px 500px 20px;
+                    color: #000;
+                    font-family: 'Forum', 'cursive';
+                    font-size: 20px;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: 40px;
                 }
                 hr{
                     width: 60px;
                     height: 1px;
                     background: #BB945F;
+                    position: relative;
+                    top: -497px;
+                    left: -242px;
                 }
                 h4, h6{
                     color: #000;
@@ -243,16 +294,21 @@ main{
                     font-weight: 700;
                     line-height: 40px;
                     letter-spacing: 2px;
+                    position: relative;
+                    width: 355px;
                 }
                 h4{
-                    margin: 75px 362px 400px 20px;
-                    width: 168px;
                     height: 40px;
+                    left: -80px;
+                    top: -477px;
+                    align-items: left;
+                    margin: 0;
                 }
                 h6{
-                    width: 148px;
                     height: 40px;
-                    margin: 115px 362px 400px 20px;
+                    top: -477px;
+                    left: 20px;
+                    margin: 0;
                 }
                 p{
                     width: 355px;
@@ -265,20 +321,29 @@ main{
                     line-height: 40px;
                     letter-spacing: 2px;
                     text-transform: capitalize;
-                    button{
-                        width: 75px;
-                        height: 30px;
-                        flex-shrink: 0;
-                        margin: 510px 495px 15px 20px;
+                    margin: 20px 20px 15px 15px;
+                    position: relative;
+                    top: -485px;
+                }
+                button{
+                    width: 75px;
+                    height: 30px;
+                    flex-shrink: 0;
+                    margin: 24px 15px 15px 20px;
+                    position: relative;
+                    top: -780px;
+                    &:hover{
+                        cursor: pointer;
                     }
-                    img{
-                        width: 200px;
-                        height: 300px;
-                        flex-shrink: 0;
-                        top: 255px;
-                        left: 390px;
-                        position: relative;
-                    }
+                }
+                img{
+                    width: 200px;
+                    height: 300px;
+                    flex-shrink: 0;
+                    left: 330px;
+                    top: -746px;
+                    position: relative;
+                    background: url(../images/pictures/book.svg);
                 }
             }
         }
@@ -291,10 +356,25 @@ main{
         flex-direction: column;
         align-items: center;
         gap: 40px;  
+        margin-top: 100px;
         .about-title{
-            width: 220px;
+            width: 240px;
             h2{
-                width: 220px;
+                width: 240px;
+                color: #0C0C0E;
+                font-family: 'Forum', 'cursive';
+                font-size: 40px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 40px;
+                letter-spacing: 2px;
+                text-transform: capitalize;
+                margin: 0;
+            }
+            hr{
+                width: 50px;
+                height: 1px;
+                flex-shrink: 0;
             }
         }
         p{
@@ -314,24 +394,47 @@ main{
         }
         .coffee-container{
             display: flex;
-            width: 1440px;
-            padding: 20px 20px 40px 20px;
-            flex-direction: column;
-            align-items: center;
-            gap: 40px;
-            .coffee-tea, .-desserts{
+            flex-direction: row;
+            gap: 420px;
+            height: 520px;
+            .coffee-tea{
                 display: inline-flex;
                 flex-direction: column;
-                justify-content: center;
                 align-items: flex-start;
                 gap: 40px;
                 color:#BB945F;
+                font-family: 'Forum', 'cursive';
+                font-size: 40px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 40px;
+                letter-spacing: 2px;
+                text-transform: capitalize;
+                margin: 0;
+                padding: 0;
+                margin-left: 20px;
+                justify-content: flex-end;
+                list-style-type: none;
                 li{
                     display: flex;
-                    justify-content: center;
-                    align-items: center;
+                    justify-content: space-between;
                     gap: 60px;
+                    flex: 2;
+                    align-items: center;
                     color: #000000;
+                    font-family: 'Inter', 'cursive';
+                    font-size: 20px;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: 40px;
+                    letter-spacing: 2px;
+                    text-transform: capitalize;
+                    width: 478px;
+                    hr{
+                        width: 100px;
+                        height: 1px;
+                        background: #BB945F;
+                    }
                 }
             }
         }
@@ -339,35 +442,64 @@ main{
     .contacts{
         display: flex;
         width: 1440px;
-        padding: 20px 20px 40px 20px;
         flex-direction: column;
         align-items: center;
         gap: 40px;
+        margin-top:70px;
+        height: 575px;
         .about-title{
-            width: 240px;
-            top: 20px;
+            width: 260px;
+            h2{
+                color: #0C0C0E;
+                font-family: 'Forum', 'cursive';
+                font-size: 40px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 40px;
+                letter-spacing: 2px;
+                text-transform: capitalize;
+                margin: 0;
+            }
+            hr{
+                width: 50px;
+                height: 1px;
+                flex-shrink: 0;
+            }
         }
         .contacts-links{
-            width: 503px;
-            height: 380px;
-            h5,a,h6{
+            width: 1400px;
+            height: 414px;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            gap: 201px;
+            .numbers{
+                width: 503px;
+                h5,a,h6{
                 color: #000;
                 text-align: center;
                 font-family: 'Inter', 'cursive';
                 font-size: 20px;
                 font-style: normal;
-                font-weight: 700;
                 line-height: 40px;
                 letter-spacing: 2px;
                 text-transform: capitalize;
+                margin-bottom: 20px;
+                margin-top: 0;
             }
             a{
                 font-weight: 400;
+                text-decoration: none;
             }
             h6{
+                text-align: left;
                 span{
                     font-weight: 400;
                 }
+            }
+            h5{
+                text-align: left;
+                font-weight: 700;
             }
         }
         img{
@@ -375,6 +507,7 @@ main{
             height: 414px;
             top: 121px;
             left: 201px;
+        }
         }
     }
     .LibraryCard{
@@ -384,6 +517,25 @@ main{
         .about-title{
             width: 372px;
             top: 20px;
+            position: relative;
+            left: 534px;
+            h2{
+                color: #0C0C0E;
+                font-family: 'Forum', 'cursive';
+                font-size: 40px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 40px;
+                letter-spacing: 2px;
+                text-transform: capitalize;
+                margin: 0;
+                width: 382px;
+            }
+            hr{
+                width: 50px;
+                height: 1px;
+                flex-shrink: 0;
+            }
         }
         h3{
             color: #000;
@@ -393,10 +545,12 @@ main{
             font-weight: 400;
             line-height: normal;
             letter-spacing: 0.6px;
-            width: 324px;
+            width: auto;
             height: 36px;
-            top: 121px;
+            top: 52px;
             left: 158px;
+            position: relative;
+            margin: 0;
         }
         .form-block{
             width: 600px;
@@ -404,6 +558,8 @@ main{
             flex-shrink: 0;
             border: 3px solid #BB945F;
             background: #FFF;
+            margin-top: 60px;
+            margin-left: 20px;
             form{
                 width: 560px;
                 height: 272px;
@@ -422,6 +578,7 @@ main{
                     letter-spacing: 0.6px;
                     top: 20px;
                     left: 20px;
+                    position: relative;
                 }
                 input{
                     width: 520px;
@@ -430,19 +587,39 @@ main{
                     border-radius: 10px;
                     background: #FFF;
                     left: 20px;
+                    position: relative;
+                    margin-top: 20px;
+                    border: #FFF;
+                    color: #8E8E8E;
+                    font-family: 'Forum','cursive';
+                    font-size: 30px;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: 50px;
+                    letter-spacing: 0.6px;
+                    padding: 8px 318px 8px 20px;
                     &:nth-child(2){
-                        top: 181px;
+                        margin-top: 25px;
                     }
                 }
-                button{
-                    width: 162px;
-                    height: 24px;
-                    display: inline-flex;
-                    padding: 10px 40px;
-                    align-items: flex-end;
-                    border-radius: 2px;
-                    border: 1px solid #0C0C0E;
-                }
+            }
+            button{
+                width: 242px;
+                height: 44px;
+                display: inline-flex;
+                align-items: flex-end;
+                border-radius: 2px;
+                border: 1px solid #0C0C0E;
+                margin: 45px 170px 30px 179px;
+                color: #0C0C0E;
+                text-align: center;
+                font-family: 'Inter','cursive';
+                font-size: 20px;
+                font-style: normal;
+                font-weight: 700;
+                line-height: normal;
+                letter-spacing: 1px;
+                padding: 10px 38px 10px 38px;
             }
         }
         .get-a-card{
