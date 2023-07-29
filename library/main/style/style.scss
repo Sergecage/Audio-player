@@ -429,6 +429,9 @@ main{
                 margin-left: 20px;
                 justify-content: flex-end;
                 list-style-type: none;
+                &:nth-child(2){
+                    align-items: flex-end;
+                }
                 li{
                     display: flex;
                     justify-content: space-between;
@@ -486,7 +489,7 @@ main{
             }
         }
         .contacts-links{
-            width: 1400px;
+            width: 1401px;
             height: 414px;
             display: flex;
             justify-content: center;

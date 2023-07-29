@@ -500,6 +500,11 @@ main .CoffeShop .coffee-container .coffee-tea {
           justify-content: flex-end;
   list-style-type: none;
 }
+main .CoffeShop .coffee-container .coffee-tea:nth-child(2) {
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
 main .CoffeShop .coffee-container .coffee-tea li {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -571,7 +576,7 @@ main .contacts .about-title hr {
   margin-top: 20px;
 }
 main .contacts .contacts-links {
-  width: 1400px;
+  width: 1401px;
   height: 414px;
   display: -webkit-box;
   display: -ms-flexbox;
