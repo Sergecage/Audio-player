@@ -6,6 +6,7 @@
 
 html, body {
     background: #FFFFFF;
+    scroll-behavior: smooth;
 }
 
 .page-container{
@@ -342,7 +343,12 @@ main{
                     &:hover{
                         cursor: pointer;
                     }
-                    &:nth-child(4){
+                }
+                .none{
+                    border-radius: 2px;
+                    border: 1px solid #BB945F;
+                    color: #BB945F;
+                    &:hover{
                         cursor: none;
                     }
                 }
@@ -417,20 +423,20 @@ main{
                 align-items: flex-start;
                 gap: 40px;
                 color:#BB945F;
-                font-family: 'Forum', 'cursive';
-                font-size: 40px;
-                font-style: normal;
-                font-weight: 400;
-                line-height: 40px;
-                letter-spacing: 2px;
-                text-transform: capitalize;
-                margin: 0;
+                margin-top: 40px;
                 padding: 0;
                 margin-left: 20px;
                 justify-content: flex-end;
                 list-style-type: none;
-                &:nth-child(2){
-                    align-items: flex-end;
+                .list-title{
+                    font-family: 'Forum', 'cursive';
+            font-size: 40px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 40px;
+            letter-spacing: 2px;
+            text-transform: capitalize;
+            color: #BB945F;
                 }
                 li{
                     display: flex;
