@@ -166,7 +166,8 @@ main .about .about-title hr {
   -ms-flex-negative: 0;
       flex-shrink: 0;
   background: #0C0C0E;
-  margin-left: 20%;
+  margin-left: 25%;
+  margin-top: 22px;
 }
 main .about h3 {
   color: #000;
@@ -206,8 +207,8 @@ main .about .about-container .image:nth-child(3) {
   background: url(../images/pictures/image\ 3.svg);
 }
 main .about .about-button {
-  width: 68px;
-  height: 16px;
+  width: 73px;
+  height: 21px;
   margin: 40px 686px 40px 686px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -215,7 +216,7 @@ main .about .about-button {
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
-  gap: 6.8px;
+  gap: 10px;
 }
 main .about .about-button .about-slider {
   border: 50px;
@@ -230,6 +231,10 @@ main .about .about-button .about-slider:checked {
 main .about .about-button .about-slider:hover {
   background: #BB945F;
   cursor: pointer;
+}
+main .about .about-button:hover {
+  width: 72px;
+  height: 21px;
 }
 main .favorite {
   width: 1440px;
@@ -273,14 +278,14 @@ main .favorite h4 {
   margin: 40px 1186px 45px 20px;
 }
 main .favorite .pick {
-  width: 700px;
-  height: 24px;
+  width: 720px;
+  height: 31px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-negative: 0;
       flex-shrink: 0;
-  margin-bottom: 40px;
+  margin-bottom: 30px;
   margin-left: 20px;
 }
 main .favorite .pick input {
@@ -297,6 +302,10 @@ main .favorite .pick input {
 main .favorite .pick input:first-child {
   margin: 0;
 }
+main .favorite .pick input:hover {
+  width: 22px;
+  height: 22px;
+}
 main .favorite .pick label {
   color: #000;
   font-family: "Inter", "cursive";
@@ -309,7 +318,7 @@ main .favorite .pick label {
 main .favorite .favorites-items {
   width: 1400px;
   height: 1150px;
-  margin: 40px 20px 40px 20px;
+  margin: 20px 20px 40px 20px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -385,10 +394,13 @@ main .favorite .favorites-items .item button {
       flex-shrink: 0;
   margin-left: 20px;
   position: relative;
-  top: -268px;
+  top: -265px;
 }
 main .favorite .favorites-items .item button:hover {
   cursor: pointer;
+  border-radius: 2px;
+  border: 1px solid #BB945F;
+  background: #BB945F;
 }
 main .favorite .favorites-items .item .none {
   border-radius: 2px;
@@ -396,7 +408,9 @@ main .favorite .favorites-items .item .none {
   color: #BB945F;
 }
 main .favorite .favorites-items .item .none:hover {
-  cursor: none;
+  cursor: not-allowed;
+  border: 1px solid #BB945F;
+  background: none;
 }
 main .favorite .favorites-items .item img {
   width: 200px;
@@ -467,18 +481,17 @@ main .CoffeShop .coffee-container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  gap: 400px;
-  height: 520px;
-  margin-left: 28px;
+  gap: 445px;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  position: relative;
+  top: -20px;
 }
-main .CoffeShop .coffee-container .coffee-tea {
+main .CoffeShop .coffee-container .coffee-left, main .CoffeShop .coffee-container .coffee-right {
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
@@ -491,15 +504,14 @@ main .CoffeShop .coffee-container .coffee-tea {
           align-items: flex-start;
   gap: 40px;
   color: #BB945F;
-  margin-top: 40px;
+  margin-top: 20px;
   padding: 0;
-  margin-left: 20px;
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end;
   list-style-type: none;
 }
-main .CoffeShop .coffee-container .coffee-tea .list-title {
+main .CoffeShop .coffee-container .coffee-left .list-title, main .CoffeShop .coffee-container .coffee-right .list-title {
   font-family: "Forum", "cursive";
   font-size: 40px;
   font-style: normal;
@@ -509,7 +521,7 @@ main .CoffeShop .coffee-container .coffee-tea .list-title {
   text-transform: capitalize;
   color: #BB945F;
 }
-main .CoffeShop .coffee-container .coffee-tea li {
+main .CoffeShop .coffee-container .coffee-left li, main .CoffeShop .coffee-container .coffee-right li {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -517,9 +529,6 @@ main .CoffeShop .coffee-container .coffee-tea li {
       -ms-flex-pack: justify;
           justify-content: space-between;
   gap: 60px;
-  -webkit-box-flex: 2;
-      -ms-flex: 2;
-          flex: 2;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -534,11 +543,44 @@ main .CoffeShop .coffee-container .coffee-tea li {
   width: 478px;
   text-align: center;
 }
-main .CoffeShop .coffee-container .coffee-tea li hr {
+main .CoffeShop .coffee-container .coffee-left li hr, main .CoffeShop .coffee-container .coffee-right li hr {
   width: 100px;
   height: 1px;
   background: #BB945F;
   color: #BB945F;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+main .CoffeShop .coffee-container .coffee-left li span, main .CoffeShop .coffee-container .coffee-right li span {
+  color: #000;
+  font-family: "Forum", "cursive";
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 40px;
+  letter-spacing: 2px;
+  text-transform: capitalize;
+}
+main .CoffeShop .coffee-container .coffee-right {
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+main .CoffeShop .coffee-container .coffee-right li {
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+main .CoffeShop .coffee-container .coffee-left {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+main .CoffeShop .coffee-container .coffee-left li {
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
 }
 main .contacts {
   display: -webkit-box;
@@ -556,7 +598,6 @@ main .contacts {
 }
 main .contacts .about-title {
   width: 260px;
-  margin-top: 18px;
   margin-left: 13px;
 }
 main .contacts .about-title h2 {
@@ -576,7 +617,7 @@ main .contacts .about-title hr {
   height: 1px;
   -ms-flex-negative: 0;
       flex-shrink: 0;
-  margin-left: 50%;
+  margin-left: 38%;
   margin-top: 20px;
 }
 main .contacts .contacts-links {
@@ -591,7 +632,7 @@ main .contacts .contacts-links {
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
-  gap: 191px;
+  gap: 195px;
 }
 main .contacts .contacts-links .numbers {
   height: 414px;
