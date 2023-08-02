@@ -426,14 +426,12 @@ main{
         }
         .coffee-container{
             display: flex;
-            gap: 480px;
+            gap: 445px;
             align-items: center;
             justify-content: flex-start;
-            margin-left: 28px;
             position: relative;
-            left: -180px;
             top: -20px;
-            .coffee-left,.cofee-right{
+            .coffee-left,.coffee-right{
                 display: inline-flex;
                 flex-direction: column;
                 align-items: flex-start;
@@ -441,7 +439,6 @@ main{
                 color:#BB945F;
                 margin-top: 20px;
                 padding: 0;
-                margin-left: 20px;
                 justify-content: flex-end;
                 list-style-type: none;
                 .list-title{
@@ -458,7 +455,6 @@ main{
                     display: flex;
                     justify-content: space-between;
                     gap: 60px;
-                    flex: 2;
                     align-items: center;
                     color: #000000;
                     font-family: 'Inter', 'cursive';
@@ -475,7 +471,30 @@ main{
                         height: 1px;
                         background: #BB945F;
                         color: #BB945F;
+                        justify-content: center;
                     }
+                    span{
+                        color: #000;
+                        font-family: 'Forum','cursive';
+                        font-size: 20px;
+                        font-style: normal;
+                        font-weight: 400;
+                        line-height: 40px;
+                        letter-spacing: 2px;
+                        text-transform: capitalize;
+                    }
+                }
+            }
+            .coffee-right{
+                align-items: flex-end;
+                li{
+                    justify-content: flex-end;
+                }
+            }
+            .coffee-left{
+                align-items: center;
+                li{
+                    justify-content: flex-start;
                 }
             }
         }
@@ -488,7 +507,6 @@ main{
         gap: 40px;
         .about-title{
             width: 260px;
-            margin-top: 18px ;
             margin-left: 13px;
             h2{
                 color: #0C0C0E;
@@ -506,7 +524,7 @@ main{
                 width: 50px;
                 height: 1px;
                 flex-shrink: 0;
-                margin-left: 50%;
+                margin-left: 38%;
                 margin-top: 20px;
             }
         }
@@ -516,7 +534,7 @@ main{
             display: flex;
             justify-content: center;
             align-items: flex-start;
-            gap: 191px;
+            gap: 195px;
             .numbers{
                 height: 414px;
                 h5,a,h6{
