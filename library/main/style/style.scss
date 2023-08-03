@@ -554,8 +554,17 @@ main{
             a{
                 font-weight: 400;
                 text-decoration: none;
-                margin-top: 40px;
-                margin-bottom: 40px;
+                &:hover{
+                    color: #BB945F;
+                }
+            }
+            .second{
+                position: relative;
+                top: 20px;
+            }
+            .third{
+                position: relative;
+                top: 38px;
             }
             h6{
                 text-align: left;
@@ -566,10 +575,10 @@ main{
             h5{
                 text-align: left;
                 font-weight: 700;
-                &:nth-child(2){
-                    margin-bottom: 20px;
-                    margin-top: 40px;
-                }
+            }
+            .senior{
+                margin-bottom: 20px;
+                    margin-top: 77px;
             }
         }
         img{
@@ -587,7 +596,7 @@ main{
         .about-title{
             width: 372px;
             margin-left: 534px;
-            margin-top: 55px;
+            margin-top: 57px;
             h2{
                 color: #0C0C0E;
                 font-family: 'Forum', 'cursive';
@@ -634,8 +643,8 @@ main{
                 height: 272px;
                 flex-shrink: 0;
                 background: #BB945F;
-                margin-top: 20px;
-                margin-left: 20px;
+                margin-top: 17px;
+                margin-left: 17px;
                 label{
                     color: #000;
                     font-family: 'Forum', 'cursive', 'sans-serif';
@@ -655,7 +664,7 @@ main{
                     border-radius: 10px;
                     background: #FFF;
                     margin-left: 20px;
-                    margin-top: 35px;
+                    margin-top: 38px;
                     border: #FFF;
                     color: #8E8E8E;
                     font-family: 'Forum','cursive';
@@ -665,9 +674,6 @@ main{
                     line-height: 50px;
                     letter-spacing: 0.6px;
                     padding: 8px 318px 8px 20px;
-                    &:nth-child(2){
-                        margin-top: 25px;
-                    }
                 }
             }
             button{
@@ -677,7 +683,7 @@ main{
                 align-items: flex-end;
                 border-radius: 2px;
                 border: 1px solid #0C0C0E;
-                margin: 18px 170px 30px 179px;
+                margin: 17px 170px 30px 179px;
                 color: #0C0C0E;
                 text-align: center;
                 font-family: 'Inter','cursive';
@@ -689,7 +695,7 @@ main{
                 padding: 10px 38px 10px 38px;
                 &:hover{
                     cursor: pointer;
-                    color: #BB945F;
+                    background: #BB945F;
                 }
             }
         }
@@ -754,7 +760,7 @@ main{
                     letter-spacing: 1px;
                     &:hover{
                         cursor: pointer;
-                        color: #BB945F;
+                        background: #BB945F;
                     }
                 }
             }
@@ -776,7 +782,12 @@ footer{
         color: #FFFFFF;
         position: relative;
         left: 20px;
-        top: 20px;
+        top: 22px;
+        font-family: 'Inter','cursive';
+        font-size: 15px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 20px;
     }
     ul{
         display: flex;
@@ -785,7 +796,7 @@ footer{
         justify-content: center;
         align-items: flex-start;
         gap: 15px;
-        margin-left: 7px;
+        margin-left: 3px;
         width: 102px;
         margin-top: 18px;
         a{
@@ -820,7 +831,7 @@ footer{
         width: 1360px;
         height: 1px;
         background: #FFF;
-        top: -38px;
+        top: -33px;
         left: 20px;
         position: relative;
     }

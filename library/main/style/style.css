@@ -654,8 +654,17 @@ main .contacts .contacts-links .numbers h5 {
 main .contacts .contacts-links .numbers a {
   font-weight: 400;
   text-decoration: none;
-  margin-top: 40px;
-  margin-bottom: 40px;
+}
+main .contacts .contacts-links .numbers a:hover {
+  color: #BB945F;
+}
+main .contacts .contacts-links .numbers .second {
+  position: relative;
+  top: 20px;
+}
+main .contacts .contacts-links .numbers .third {
+  position: relative;
+  top: 38px;
 }
 main .contacts .contacts-links .numbers h6 {
   text-align: left;
@@ -667,9 +676,9 @@ main .contacts .contacts-links .numbers h5 {
   text-align: left;
   font-weight: 700;
 }
-main .contacts .contacts-links .numbers h5:nth-child(2) {
+main .contacts .contacts-links .numbers .senior {
   margin-bottom: 20px;
-  margin-top: 40px;
+  margin-top: 77px;
 }
 main .contacts .contacts-links img {
   width: 696px;
@@ -685,7 +694,7 @@ main .LibraryCard {
 main .LibraryCard .about-title {
   width: 372px;
   margin-left: 534px;
-  margin-top: 55px;
+  margin-top: 57px;
 }
 main .LibraryCard .about-title h2 {
   color: #0C0C0E;
@@ -736,8 +745,8 @@ main .LibraryCard .form-block form {
   -ms-flex-negative: 0;
       flex-shrink: 0;
   background: #BB945F;
-  margin-top: 20px;
-  margin-left: 20px;
+  margin-top: 17px;
+  margin-left: 17px;
 }
 main .LibraryCard .form-block form label {
   color: #000;
@@ -759,7 +768,7 @@ main .LibraryCard .form-block form input {
   border-radius: 10px;
   background: #FFF;
   margin-left: 20px;
-  margin-top: 35px;
+  margin-top: 38px;
   border: #FFF;
   color: #8E8E8E;
   font-family: "Forum", "cursive";
@@ -769,9 +778,6 @@ main .LibraryCard .form-block form input {
   line-height: 50px;
   letter-spacing: 0.6px;
   padding: 8px 318px 8px 20px;
-}
-main .LibraryCard .form-block form input:nth-child(2) {
-  margin-top: 25px;
 }
 main .LibraryCard .form-block button {
   width: 242px;
@@ -784,7 +790,7 @@ main .LibraryCard .form-block button {
           align-items: flex-end;
   border-radius: 2px;
   border: 1px solid #0C0C0E;
-  margin: 18px 170px 30px 179px;
+  margin: 17px 170px 30px 179px;
   color: #0C0C0E;
   text-align: center;
   font-family: "Inter", "cursive";
@@ -797,7 +803,7 @@ main .LibraryCard .form-block button {
 }
 main .LibraryCard .form-block button:hover {
   cursor: pointer;
-  color: #BB945F;
+  background: #BB945F;
 }
 main .LibraryCard .get-a-card {
   width: 456px;
@@ -873,7 +879,7 @@ main .LibraryCard .get-a-card .signlog button {
 }
 main .LibraryCard .get-a-card .signlog button:hover {
   cursor: pointer;
-  color: #BB945F;
+  background: #BB945F;
 }
 
 footer {
@@ -891,7 +897,12 @@ footer a {
   color: #FFFFFF;
   position: relative;
   left: 20px;
-  top: 20px;
+  top: 22px;
+  font-family: "Inter", "cursive";
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
 }
 footer ul {
   display: -webkit-box;
@@ -906,7 +917,7 @@ footer ul {
       -ms-flex-align: start;
           align-items: flex-start;
   gap: 15px;
-  margin-left: 7px;
+  margin-left: 3px;
   width: 102px;
   margin-top: 18px;
 }
@@ -942,7 +953,7 @@ footer hr {
   width: 1360px;
   height: 1px;
   background: #FFF;
-  top: -38px;
+  top: -33px;
   left: 20px;
   position: relative;
 }
