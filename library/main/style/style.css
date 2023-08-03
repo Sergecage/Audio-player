@@ -994,7 +994,8 @@ footer h3 {
           justify-content: center;
   -ms-flex-negative: 0;
       flex-shrink: 0;
-  top: -12px;
+  top: -20px;
+  left: -16px;
   position: relative;
 }
 footer h3 a {
