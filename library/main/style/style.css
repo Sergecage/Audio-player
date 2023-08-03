@@ -929,6 +929,14 @@ footer ul a {
   -ms-flex-negative: 0;
       flex-shrink: 0;
 }
+footer ul a:hover {
+  -webkit-transform: rotate(360deg);
+          transform: rotate(360deg);
+  color: #BB945F;
+}
+footer ul a img:hover {
+  background-color: #BB945F;
+}
 footer .schedule {
   width: 149px;
   height: 90px;
@@ -986,6 +994,10 @@ footer h3 {
           justify-content: center;
   -ms-flex-negative: 0;
       flex-shrink: 0;
+  top: -12px;
+  position: relative;
+}
+footer h3 a {
   color: #FFF;
   text-align: center;
   font-family: "Inter", "cursive";
@@ -994,13 +1006,26 @@ footer h3 {
   font-weight: 400;
   line-height: 20px;
   letter-spacing: 2px;
-  top: -12px;
-  position: relative;
+}
+footer h3 a:hover {
+  color: #BB945F;
 }
 footer .name {
   width: 260px;
   height: 50px;
   top: -40px;
-  left: 1300px;
+  left: 1260px;
   position: relative;
+  color: #FFF;
+  text-align: center;
+  font-family: "Inter", "cursi";
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 40px;
+  letter-spacing: 2px;
+}
+footer .name:hover {
+  color: #BB945F;
+  cursor: pointer;
 }
