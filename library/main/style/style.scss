@@ -805,6 +805,15 @@ footer{
         width: 24px;
         height: 24px;
         flex-shrink: 0;
+        &:hover{
+            transform: rotate(360deg);
+            color: #BB945F;
+        }
+        img{
+            &:hover{
+                background-color: #BB945F;
+            }
+        }
         }
     }
     .schedule{
@@ -856,7 +865,10 @@ footer{
         flex-direction: column;
         justify-content: center;
         flex-shrink: 0;
-        color: #FFF;
+        top: -12px;
+        position: relative;
+        a{
+            color: #FFF;
         text-align: center;
         font-family: 'Inter', 'cursive';
         font-size: 20px;
@@ -864,14 +876,28 @@ footer{
         font-weight: 400;
         line-height: 20px;
         letter-spacing: 2px;
-        top: -12px;
-        position: relative;
+        &:hover{
+            color: #BB945F;
+        }
+        }
     }
     .name{
         width: 260px;
         height: 50px;
         top: -40px;
-        left: 1300px;
+        left: 1260px;
         position: relative;
+        color: #FFF;
+        text-align: center;
+        font-family: 'Inter','cursi';
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 40px;
+        letter-spacing: 2px;
+        &:hover{
+            color: #BB945F;
+            cursor: pointer;
+        }
     }
 }
