@@ -206,6 +206,9 @@ main .about .about-container .image:nth-child(2) {
 main .about .about-container .image:nth-child(3) {
   background: url(../images/pictures/image\ 3.svg);
 }
+main .about .about-container .arrow-left, main .about .about-container .arrow-right {
+  display: none;
+}
 main .about .about-button {
   width: 73px;
   height: 21px;
@@ -425,7 +428,7 @@ main .favorite .favorites-items .item img {
 main .favorite .favorites-items .item img:nth-child(3) {
   background: url(../images/pictures/book\ 3.svg);
 }
-main .CoffeShop {
+main .CoffeeShop {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -440,10 +443,10 @@ main .CoffeShop {
           align-items: center;
   gap: 40px;
 }
-main .CoffeShop .about-title {
+main .CoffeeShop .about-title {
   width: 240px;
 }
-main .CoffeShop .about-title h2 {
+main .CoffeeShop .about-title h2 {
   width: 240px;
   color: #0C0C0E;
   font-family: "Forum", "cursive";
@@ -457,7 +460,7 @@ main .CoffeShop .about-title h2 {
   letter-spacing: 2px;
   margin-left: 9px;
 }
-main .CoffeShop .about-title hr {
+main .CoffeeShop .about-title hr {
   width: 50px;
   height: 1px;
   -ms-flex-negative: 0;
@@ -465,7 +468,7 @@ main .CoffeShop .about-title hr {
   margin-left: 40%;
   margin-top: 19px;
 }
-main .CoffeShop p {
+main .CoffeeShop p {
   width: 1400px;
   height: 120px;
   color: #000;
@@ -477,7 +480,7 @@ main .CoffeShop p {
   line-height: 40px;
   letter-spacing: 2px;
 }
-main .CoffeShop .coffee-container {
+main .CoffeeShop .coffee-container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -491,7 +494,7 @@ main .CoffeShop .coffee-container {
   position: relative;
   top: -20px;
 }
-main .CoffeShop .coffee-container .coffee-left, main .CoffeShop .coffee-container .coffee-right {
+main .CoffeeShop .coffee-container .coffee-left, main .CoffeeShop .coffee-container .coffee-right {
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
@@ -511,7 +514,7 @@ main .CoffeShop .coffee-container .coffee-left, main .CoffeShop .coffee-containe
           justify-content: flex-end;
   list-style-type: none;
 }
-main .CoffeShop .coffee-container .coffee-left .list-title, main .CoffeShop .coffee-container .coffee-right .list-title {
+main .CoffeeShop .coffee-container .coffee-left .list-title, main .CoffeeShop .coffee-container .coffee-right .list-title {
   font-family: "Forum", "cursive";
   font-size: 40px;
   font-style: normal;
@@ -521,7 +524,7 @@ main .CoffeShop .coffee-container .coffee-left .list-title, main .CoffeShop .cof
   text-transform: capitalize;
   color: #BB945F;
 }
-main .CoffeShop .coffee-container .coffee-left li, main .CoffeShop .coffee-container .coffee-right li {
+main .CoffeeShop .coffee-container .coffee-left li, main .CoffeeShop .coffee-container .coffee-right li {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -543,7 +546,7 @@ main .CoffeShop .coffee-container .coffee-left li, main .CoffeShop .coffee-conta
   width: 478px;
   text-align: center;
 }
-main .CoffeShop .coffee-container .coffee-left li hr, main .CoffeShop .coffee-container .coffee-right li hr {
+main .CoffeeShop .coffee-container .coffee-left li hr, main .CoffeeShop .coffee-container .coffee-right li hr {
   width: 100px;
   height: 1px;
   background: #BB945F;
@@ -552,7 +555,7 @@ main .CoffeShop .coffee-container .coffee-left li hr, main .CoffeShop .coffee-co
       -ms-flex-pack: center;
           justify-content: center;
 }
-main .CoffeShop .coffee-container .coffee-left li span, main .CoffeShop .coffee-container .coffee-right li span {
+main .CoffeeShop .coffee-container .coffee-left li span, main .CoffeeShop .coffee-container .coffee-right li span {
   color: #000;
   font-family: "Forum", "cursive";
   font-size: 20px;
@@ -562,22 +565,22 @@ main .CoffeShop .coffee-container .coffee-left li span, main .CoffeShop .coffee-
   letter-spacing: 2px;
   text-transform: capitalize;
 }
-main .CoffeShop .coffee-container .coffee-right {
+main .CoffeeShop .coffee-container .coffee-right {
   -webkit-box-align: end;
       -ms-flex-align: end;
           align-items: flex-end;
 }
-main .CoffeShop .coffee-container .coffee-right li {
+main .CoffeeShop .coffee-container .coffee-right li {
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end;
 }
-main .CoffeShop .coffee-container .coffee-left {
+main .CoffeeShop .coffee-container .coffee-left {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
 }
-main .CoffeShop .coffee-container .coffee-left li {
+main .CoffeeShop .coffee-container .coffee-left li {
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
@@ -1029,4 +1032,243 @@ footer .name {
 footer .name:hover {
   color: #BB945F;
   cursor: pointer;
+}
+
+@media screen and (max-width: 768px) {
+  ::-webkit-scrollbar {
+    display: none;
+  }
+  html, body {
+    width: 768px;
+  }
+  header {
+    width: 768px;
+  }
+  header nav {
+    width: 45px;
+    height: 30px;
+    background: url(../images/icons/burger.svg);
+    background-repeat: no-repeat;
+    position: relative;
+    left: 230px;
+    margin: 0;
+    top: 31px;
+  }
+  header nav ul {
+    display: none;
+  }
+  header nav:hover {
+    width: 332px;
+    height: 570px;
+    background-color: #000;
+    top: 0;
+    left: 145px;
+    z-index: 1;
+    background-image: url(../images/icons/cross.svg);
+    background-position: 260px 31px;
+    background-size: 32px 32px;
+  }
+  header nav:hover ul {
+    width: 118px;
+    height: 370px;
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin-top: 100px;
+    margin-left: 107px;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  header .icon-log {
+    position: relative;
+    margin-right: 120px;
+    z-index: 2;
+  }
+  main .welcome {
+    width: 768px;
+    height: 600px;
+  }
+  main .about {
+    width: 768px;
+  }
+  main .about .about-title {
+    left: 331px;
+    margin-top: 20px;
+  }
+  main .about h3 {
+    width: 728px;
+    height: 80px;
+  }
+  main .about .about-container {
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    gap: 58px;
+    width: 600px;
+    height: 601px;
+    margin-left: 100px;
+    margin-bottom: 20px;
+  }
+  main .about .about-container .image:nth-child(3) {
+    display: none;
+  }
+  main .about .about-container .image:nth-child(2) {
+    display: none;
+  }
+  main .about .about-container .arrow-left {
+    display: inline;
+    margin-top: 32px;
+    width: 24px;
+    height: 24px;
+  }
+  main .about .about-container .arrow-left {
+    background: url(../images/icons/ArrowRight.svg);
+    background-repeat: no-repeat;
+  }
+  main .about .about-container .arrow-right {
+    background: url(../images/icons/ArrowLeft.svg);
+    background-repeat: no-repeat;
+    display: inline;
+    margin-top: 32px;
+    width: 24px;
+    height: 24px;
+  }
+  main .about .about-button {
+    margin: 0 350px 40px 350px;
+  }
+  main .favorite {
+    width: 768px;
+  }
+  main .favorite .about-title {
+    left: 304px;
+    margin-top: 60px;
+  }
+  main .favorite h4 {
+    margin: 40px 514px 40px 20px;
+  }
+  main .favorite .favorites-items {
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    gap: 40px;
+    width: 590px;
+    height: 2340px;
+    margin-left: 89px;
+  }
+  main .CoffeeShop {
+    width: 768px;
+    height: 1481px;
+  }
+  main .CoffeeShop p {
+    width: 728px;
+    height: 200px;
+  }
+  main .CoffeeShop .coffee-container {
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    gap: 40px;
+    width: 728px;
+  }
+  main .CoffeeShop .coffee-container .coffee-left {
+    left: -120px;
+    position: relative;
+  }
+  main .contacts {
+    width: 768px;
+    height: 995px;
+    padding: 20px 20px 40px 20px;
+  }
+  main .contacts .contacts-links {
+    width: 727px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    gap: 100px;
+    margin-top: 201px;
+  }
+  main .contacts .contacts-links .numbers {
+    width: 727px;
+  }
+  main .contacts .contacts-links .numbers .senior {
+    margin-top: 40px;
+  }
+  main .contacts .contacts-links .numbers h6 {
+    margin-bottom: 0;
+  }
+  main .LibraryCard {
+    width: 768px;
+  }
+  main .LibraryCard .about-title {
+    margin-left: 198px;
+  }
+  main .LibraryCard h3 {
+    margin-left: 222px;
+  }
+  main .LibraryCard .form-block {
+    margin-left: 84px;
+  }
+  main .LibraryCard .get-a-card {
+    left: 84px;
+    top: 84px;
+    width: 600px;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  main .LibraryCard .get-a-card h4 {
+    left: 174px;
+  }
+  main .LibraryCard .get-a-card p {
+    width: 600px;
+    text-align: center;
+  }
+  main .LibraryCard .get-a-card .signlog {
+    margin-left: 204px;
+  }
+  footer {
+    width: 768px;
+    margin-top: 7600px;
+  }
+  footer .schedule {
+    left: 600px;
+  }
+  footer hr {
+    width: 728px;
+  }
+  footer .name {
+    left: 600px;
+  }
 }
