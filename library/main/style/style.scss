@@ -176,6 +176,9 @@ main{
                     background: url(../images/pictures/image\ 3.svg);
                 }
             }
+            .arrow-left, .arrow-right{
+                display: none;
+            }
         }
         .about-button{
             width: 73px;
@@ -381,7 +384,7 @@ main{
             }
         }
     }
-    .CoffeShop{
+    .CoffeeShop{
         display: flex;
         width: 1440px;
         padding: 20px 20px 40px 20px;
@@ -899,6 +902,215 @@ footer{
         &:hover{
             color: #BB945F;
             cursor: pointer;
+        }
+    }
+}
+
+@media  screen and (max-width: 768px){
+    ::-webkit-scrollbar{
+        display: none;
+    }
+    html, body{
+        width: 768px;
+    }
+    header{
+        width: 768px;
+        nav{
+            width: 45px;
+            height: 30px;
+            background: url(../images/icons/burger.svg);
+            background-repeat: no-repeat;
+            position: relative;
+            left: 230px;
+            margin: 0;
+            top: 31px;
+            ul{
+                display: none;
+            }
+            &:hover{
+                width: 332px;
+                height: 570px;
+                background-color: #000;
+                top: 0;
+                left: 145px;
+                z-index: 1;
+                background-image: url(../images/icons/cross.svg);
+                background-position: 260px 31px;
+                background-size: 32px 32px;
+                ul{
+                width: 118px;
+                 height: 370px;
+                display: inline-flex;
+                flex-direction: column;
+                margin-top: 100px;
+                margin-left: 107px;
+                align-items: center;
+                }
+            }
+        }
+        .icon-log{
+            position: relative;
+            margin-right: 120px;
+            z-index: 2;
+        }
+    }
+    main{
+        .welcome{
+            width: 768px;
+            height: 600px;
+            .welcome-black{
+
+            }
+        }
+        .about{
+            width: 768px;
+            .about-title{
+                left: 331px;
+                margin-top: 20px ;
+            }
+            h3{
+                width: 728px;
+                height: 80px;
+            }
+            .about-container{
+                display: inline-flex;
+                justify-content: center;
+                align-items: center;
+                gap: 58px;
+                width: 600px;
+                height: 601px;
+                margin-left: 100px;
+                margin-bottom: 20px;
+                .image{
+                    &:nth-child(3){
+                        display: none;
+                    }&:nth-child(2){
+                        display: none;
+                    }
+                }
+                .arrow-left{
+                    display: inline;
+                    margin-top: 32px;
+                    width: 24px;
+                    height: 24px;
+                }
+                .arrow-left{
+                    background: url(../images/icons/ArrowRight.svg);
+                    background-repeat: no-repeat;
+                }
+                .arrow-right{
+                    background: url(../images/icons/ArrowLeft.svg);
+                    background-repeat: no-repeat;
+                    display: inline;
+                    margin-top: 32px;
+                    width: 24px;
+                    height: 24px;
+                }
+            }
+            .about-button{
+                margin: 0 350px 40px 350px;
+            }
+        }
+        .favorite{
+            width: 768px;
+            .about-title{
+                left: 304px;
+                margin-top: 60px;
+            }
+            h4{
+                margin: 40px 514px 40px 20px;
+            }
+            .favorites-items{
+                display: inline-flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                gap: 40px;
+                width: 590px;
+                height: 2340px;
+                margin-left: 89px;
+            }
+        }
+        .CoffeeShop{
+            width: 768px;
+            height: 1481px;
+            p{
+                width: 728px;
+                height: 200px;
+            }
+            .coffee-container{
+                display: inline-flex;
+                flex-direction: column;
+                justify-content: center;
+                gap: 40px;
+                width: 728px;
+                .coffee-left{
+                    left: -120px;
+                    position: relative;
+                }
+            }
+        }
+        .contacts{
+            width: 768px;
+            height: 995px;
+            padding: 20px 20px 40px 20px;
+            .contacts-links{
+                width: 727px;
+                flex-direction: column;
+                align-items: center;
+                gap: 100px;
+                margin-top: 201px;
+                .numbers{
+                    width: 727px;
+                    .senior{
+                        margin-top: 40px;
+                    }
+                    h6{
+                        margin-bottom: 0;
+                    }
+                }
+            }
+        }
+        .LibraryCard{
+            width: 768px;
+            .about-title{
+                margin-left: 198px;
+            }
+            h3{
+                margin-left: 222px;
+            }
+            .form-block{
+                margin-left: 84px;
+            }
+            .get-a-card{
+                left: 84px;
+                top: 84px;
+                width: 600px;
+                justify-content: center;
+                h4{
+                    left: 174px;
+                }
+                p{
+                    width: 600px;
+                    text-align: center;
+                }
+                .signlog{
+                    margin-left: 204px;
+                }
+            }
+        }
+    }
+    footer{
+        width: 768px;
+        margin-top: 7600px;
+        .schedule{
+            left: 600px;
+        }
+        hr{
+            width: 728px;
+        }
+        .name{
+            left: 600px;
         }
     }
 }
