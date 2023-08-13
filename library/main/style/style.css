@@ -210,7 +210,7 @@ main .about .about-container .arrow-left, main .about .about-container .arrow-ri
   display: none;
 }
 main .about .about-button {
-  width: 73px;
+  width: 173px;
   height: 21px;
   margin: 40px 686px 40px 686px;
   display: -webkit-box;
@@ -1057,18 +1057,18 @@ footer .name:hover {
   header nav ul {
     display: none;
   }
-  header nav:hover {
+  header nav:active {
     width: 332px;
     height: 570px;
     background-color: #000;
     top: 0;
-    left: 145px;
+    left: 148px;
     z-index: 1;
     background-image: url(../images/icons/cross.svg);
     background-position: 260px 31px;
     background-size: 32px 32px;
   }
-  header nav:hover ul {
+  header nav:active ul {
     width: 118px;
     height: 370px;
     display: -webkit-inline-box;
@@ -1153,6 +1153,9 @@ footer .name:hover {
   main .favorite .about-title {
     left: 304px;
     margin-top: 60px;
+  }
+  main .favorite .about-title hr {
+    margin-left: 7%;
   }
   main .favorite h4 {
     margin: 40px 514px 40px 20px;
