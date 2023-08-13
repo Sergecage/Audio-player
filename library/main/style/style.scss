@@ -921,7 +921,7 @@ footer{
             background: url(../images/icons/burger.svg);
             background-repeat: no-repeat;
             position: relative;
-            left: 230px;
+            left: 250px;
             margin: 0;
             top: 31px;
             ul{
@@ -950,7 +950,7 @@ footer{
         }
         .icon-log{
             position: relative;
-            margin-right: 120px;
+            margin-right: 105px;
             z-index: 2;
         }
     }
@@ -971,16 +971,18 @@ footer{
             h3{
                 width: 728px;
                 height: 80px;
+                margin-left: 13px;
             }
             .about-container{
                 display: inline-flex;
                 justify-content: center;
                 align-items: center;
-                gap: 58px;
-                width: 600px;
+                gap: 50px;
+                width: 580px;
                 height: 601px;
-                margin-left: 100px;
-                margin-bottom: 20px;
+                margin-left: 88px;
+                margin-bottom: 0;
+                margin-top: 0;
                 .image{
                     &:nth-child(3){
                         display: none;
@@ -1008,20 +1010,20 @@ footer{
                 }
             }
             .about-button{
-                margin: 0 350px 40px 350px;
+                margin: 0 350px 30px 350px;
             }
         }
         .favorite{
             width: 768px;
             .about-title{
                 left: 304px;
-                margin-top: 60px;
+                margin-top: 21px;
                 hr{
                     margin-left: 7%;
                 }
             }
             h4{
-                margin: 40px 514px 40px 20px;
+                margin: 40px 514px 45px 20px;
             }
             .favorites-items{
                 display: inline-flex;
@@ -1031,7 +1033,8 @@ footer{
                 gap: 40px;
                 width: 590px;
                 height: 2340px;
-                margin-left: 89px;
+                margin-left: 70px;
+                margin-top: 0;
             }
         }
         .CoffeeShop{
@@ -1047,9 +1050,14 @@ footer{
                 justify-content: center;
                 gap: 40px;
                 width: 728px;
+                justify-content: space-between;
                 .coffee-left{
-                    left: -120px;
+                    left: -125px;
                     position: relative;
+                }
+                .coffee-right{
+                    margin-top: 0;
+                    margin-left: 245px;
                 }
             }
         }
@@ -1062,20 +1070,26 @@ footer{
                 flex-direction: column;
                 align-items: center;
                 gap: 100px;
-                margin-top: 201px;
+                margin-top: 210px;
                 .numbers{
                     width: 727px;
+                    margin-top: 70px;
+                    .third{
+                        top: 41px;
+                    }
                     .senior{
-                        margin-top: 40px;
+                        margin-top: 80px;
                     }
                     h6{
                         margin-bottom: 0;
+                        margin-top: 15px;
                     }
                 }
             }
         }
         .LibraryCard{
             width: 768px;
+            margin-top: 80px;
             .about-title{
                 margin-left: 198px;
             }
@@ -1087,30 +1101,36 @@ footer{
             }
             .get-a-card{
                 left: 84px;
-                top: 84px;
+                top: 20px;
                 width: 600px;
                 justify-content: center;
+                position: relative;
                 h4{
-                    left: 174px;
+                    left: 179px;
                 }
                 p{
                     width: 600px;
                     text-align: center;
                 }
                 .signlog{
-                    margin-left: 204px;
+                    margin-left: 213px;
+                    margin-top: 30px;
                 }
             }
         }
     }
     footer{
         width: 768px;
-        margin-top: 7600px;
+        margin-top: 7430px;
         .schedule{
             left: 600px;
         }
         hr{
             width: 728px;
+        }
+        h3{
+            left: -45px;
+            position: relative;
         }
         .name{
             left: 600px;

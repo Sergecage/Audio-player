@@ -1050,7 +1050,7 @@ footer .name:hover {
     background: url(../images/icons/burger.svg);
     background-repeat: no-repeat;
     position: relative;
-    left: 230px;
+    left: 250px;
     margin: 0;
     top: 31px;
   }
@@ -1086,7 +1086,7 @@ footer .name:hover {
   }
   header .icon-log {
     position: relative;
-    margin-right: 120px;
+    margin-right: 105px;
     z-index: 2;
   }
   main .welcome {
@@ -1103,6 +1103,7 @@ footer .name:hover {
   main .about h3 {
     width: 728px;
     height: 80px;
+    margin-left: 13px;
   }
   main .about .about-container {
     display: -webkit-inline-box;
@@ -1114,11 +1115,12 @@ footer .name:hover {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    gap: 58px;
-    width: 600px;
+    gap: 50px;
+    width: 580px;
     height: 601px;
-    margin-left: 100px;
-    margin-bottom: 20px;
+    margin-left: 88px;
+    margin-bottom: 0;
+    margin-top: 0;
   }
   main .about .about-container .image:nth-child(3) {
     display: none;
@@ -1145,20 +1147,20 @@ footer .name:hover {
     height: 24px;
   }
   main .about .about-button {
-    margin: 0 350px 40px 350px;
+    margin: 0 350px 30px 350px;
   }
   main .favorite {
     width: 768px;
   }
   main .favorite .about-title {
     left: 304px;
-    margin-top: 60px;
+    margin-top: 21px;
   }
   main .favorite .about-title hr {
     margin-left: 7%;
   }
   main .favorite h4 {
-    margin: 40px 514px 40px 20px;
+    margin: 40px 514px 45px 20px;
   }
   main .favorite .favorites-items {
     display: -webkit-inline-box;
@@ -1177,7 +1179,8 @@ footer .name:hover {
     gap: 40px;
     width: 590px;
     height: 2340px;
-    margin-left: 89px;
+    margin-left: 70px;
+    margin-top: 0;
   }
   main .CoffeeShop {
     width: 768px;
@@ -1200,10 +1203,17 @@ footer .name:hover {
             justify-content: center;
     gap: 40px;
     width: 728px;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
   }
   main .CoffeeShop .coffee-container .coffee-left {
-    left: -120px;
+    left: -125px;
     position: relative;
+  }
+  main .CoffeeShop .coffee-container .coffee-right {
+    margin-top: 0;
+    margin-left: 245px;
   }
   main .contacts {
     width: 768px;
@@ -1220,19 +1230,25 @@ footer .name:hover {
         -ms-flex-align: center;
             align-items: center;
     gap: 100px;
-    margin-top: 201px;
+    margin-top: 210px;
   }
   main .contacts .contacts-links .numbers {
     width: 727px;
+    margin-top: 70px;
+  }
+  main .contacts .contacts-links .numbers .third {
+    top: 41px;
   }
   main .contacts .contacts-links .numbers .senior {
-    margin-top: 40px;
+    margin-top: 80px;
   }
   main .contacts .contacts-links .numbers h6 {
     margin-bottom: 0;
+    margin-top: 15px;
   }
   main .LibraryCard {
     width: 768px;
+    margin-top: 80px;
   }
   main .LibraryCard .about-title {
     margin-left: 198px;
@@ -1245,31 +1261,37 @@ footer .name:hover {
   }
   main .LibraryCard .get-a-card {
     left: 84px;
-    top: 84px;
+    top: 20px;
     width: 600px;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
+    position: relative;
   }
   main .LibraryCard .get-a-card h4 {
-    left: 174px;
+    left: 179px;
   }
   main .LibraryCard .get-a-card p {
     width: 600px;
     text-align: center;
   }
   main .LibraryCard .get-a-card .signlog {
-    margin-left: 204px;
+    margin-left: 213px;
+    margin-top: 30px;
   }
   footer {
     width: 768px;
-    margin-top: 7600px;
+    margin-top: 7430px;
   }
   footer .schedule {
     left: 600px;
   }
   footer hr {
     width: 728px;
+  }
+  footer h3 {
+    left: -45px;
+    position: relative;
   }
   footer .name {
     left: 600px;
