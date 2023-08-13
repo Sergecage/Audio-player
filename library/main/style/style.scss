@@ -181,7 +181,7 @@ main{
             }
         }
         .about-button{
-            width: 73px;
+            width: 173px;
             height: 21px;
             margin: 40px 686px 40px 686px;
             display: flex;
@@ -927,12 +927,12 @@ footer{
             ul{
                 display: none;
             }
-            &:hover{
+            &:active{
                 width: 332px;
                 height: 570px;
                 background-color: #000;
                 top: 0;
-                left: 145px;
+                left: 148px;
                 z-index: 1;
                 background-image: url(../images/icons/cross.svg);
                 background-position: 260px 31px;
@@ -1016,6 +1016,9 @@ footer{
             .about-title{
                 left: 304px;
                 margin-top: 60px;
+                hr{
+                    margin-left: 7%;
+                }
             }
             h4{
                 margin: 40px 514px 40px 20px;
