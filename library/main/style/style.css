@@ -47,13 +47,13 @@ header h1 {
   letter-spacing: 0.6px;
   width: 294px;
 }
-header nav {
+header .nav {
   width: 604px;
   height: 50px;
   margin-top: 20px;
   margin-left: 440px;
 }
-header nav ul {
+header .nav ul {
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
@@ -66,7 +66,7 @@ header nav ul {
   height: 50px;
   list-style: none;
 }
-header nav ul li a {
+header .nav ul li a {
   text-decoration: none;
   color: #FFF;
   font-family: "Inter", "cursive";
@@ -75,7 +75,7 @@ header nav ul li a {
   font-weight: 400;
   line-height: 50px;
 }
-header nav ul li a:hover {
+header .nav ul li a:hover {
   cursor: pointer;
   color: #BB945F;
 }
@@ -1044,7 +1044,7 @@ footer .name:hover {
   header {
     width: 768px;
   }
-  header nav {
+  header .nav {
     width: 45px;
     height: 30px;
     background: url(../images/icons/burger.svg);
@@ -1054,21 +1054,21 @@ footer .name:hover {
     margin: 0;
     top: 31px;
   }
-  header nav ul {
+  header .nav ul {
     display: none;
   }
-  header nav:active {
+  headernav--active {
     width: 332px;
     height: 570px;
     background-color: #000;
     top: 0;
-    left: 148px;
+    left: 135px;
     z-index: 1;
     background-image: url(../images/icons/cross.svg);
     background-position: 260px 31px;
     background-size: 32px 32px;
   }
-  header nav:active ul {
+  headernav--active ul {
     width: 118px;
     height: 370px;
     display: -webkit-inline-box;
