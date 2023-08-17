@@ -37,7 +37,7 @@ header{
         letter-spacing: 0.6px;
         width: 294px;
     }
-    nav{
+    .nav{
         width: 604px;
         height: 50px;
         margin-top: 20px;
@@ -915,7 +915,7 @@ footer{
     }
     header{
         width: 768px;
-        nav{
+        .nav{
             width: 45px;
             height: 30px;
             background: url(../images/icons/burger.svg);
@@ -927,25 +927,25 @@ footer{
             ul{
                 display: none;
             }
-            &:active{
-                width: 332px;
-                height: 570px;
-                background-color: #000;
-                top: 0;
-                left: 148px;
-                z-index: 1;
-                background-image: url(../images/icons/cross.svg);
-                background-position: 260px 31px;
-                background-size: 32px 32px;
-                ul{
-                width: 118px;
-                 height: 370px;
-                display: inline-flex;
-                flex-direction: column;
-                margin-top: 100px;
-                margin-left: 107px;
-                align-items: center;
-                }
+        }
+        .nav--active{
+            width: 332px;
+            height: 570px;
+            background-color: #000;
+            top: 0;
+            left: 135px;
+            z-index: 1;
+            background-image: url(../images/icons/cross.svg);
+            background-position: 260px 31px;
+            background-size: 32px 32px;
+            ul{
+            width: 118px;
+             height: 370px;
+            display: inline-flex;
+            flex-direction: column;
+            margin-top: 100px;
+            margin-left: 107px;
+            align-items: center;
             }
         }
         .icon-log{

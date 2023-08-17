@@ -1,5 +1,5 @@
-document.addEventListener("DOMContentLoaded", () => {
-    const navigation = document.querySelector("nav");
-
-    navigation.onclick.document.style.display = "none";
+const navigation = document.getElementsByClassName("nav");
+const navbarList = document.querySelector("ul");
+document.addEventListener('click', () => {
+    navigation.classList.toggle('nav--active');
 });
