@@ -1057,7 +1057,7 @@ footer .name:hover {
   header .nav ul {
     display: none;
   }
-  headernav--active {
+  header .nav--active {
     width: 332px;
     height: 570px;
     background-color: #000;
@@ -1068,7 +1068,7 @@ footer .name:hover {
     background-position: 260px 31px;
     background-size: 32px 32px;
   }
-  headernav--active ul {
+  header .nav--active ul {
     width: 118px;
     height: 370px;
     display: -webkit-inline-box;
