@@ -91,6 +91,58 @@ header .icon-log:hover {
   cursor: pointer;
   opacity: 0.5;
 }
+header .dropMenu {
+  width: 80px;
+  height: 115px;
+  background: #FFF;
+  position: absolute;
+  left: 84rem;
+  top: 3.75rem;
+  display: none;
+}
+header .dropMenu h5 {
+  color: #000;
+  font-family: "Inter", "cursive";
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 20px;
+  margin-top: 5px;
+  margin-left: 16px;
+}
+header .dropMenu hr {
+  width: 40px;
+  height: 1px;
+  background: #BB945F;
+  margin-left: 20px;
+}
+header .dropMenu .logs {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 10px;
+  margin-top: 20px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+header .dropMenu .logs .logIn {
+  color: #000;
+  text-align: center;
+  font-family: "Inter", "cursive";
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
+}
+header .dropMenu .logs .logIn:hover {
+  color: #BB945F;
+  cursor: pointer;
+}
 
 main {
   width: 1440px;
@@ -234,6 +286,15 @@ main .about .about-button .about-slider:checked {
 main .about .about-button .about-slider:hover {
   background: #BB945F;
   cursor: pointer;
+}
+main .about .about-button .about-slider:nth-child(4) {
+  display: none;
+}
+main .about .about-button .about-slider:nth-child(5) {
+  display: none;
+}
+main .about .about-button .about-slider.active {
+  background: #BB945F;
 }
 main .about .about-button:hover {
   width: 72px;
@@ -544,7 +605,6 @@ main .CoffeeShop .coffee-container .coffee-left li, main .CoffeeShop .coffee-con
   letter-spacing: 2px;
   text-transform: capitalize;
   width: 478px;
-  text-align: center;
 }
 main .CoffeeShop .coffee-container .coffee-left li hr, main .CoffeeShop .coffee-container .coffee-right li hr {
   width: 100px;
@@ -574,16 +634,6 @@ main .CoffeeShop .coffee-container .coffee-right li {
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end;
-}
-main .CoffeeShop .coffee-container .coffee-left {
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-main .CoffeeShop .coffee-container .coffee-left li {
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
 }
 main .contacts {
   display: -webkit-box;
@@ -1062,11 +1112,12 @@ footer .name:hover {
     height: 570px;
     background-color: #000;
     top: 0;
-    left: 135px;
+    left: 133px;
     z-index: 1;
     background-image: url(../images/icons/cross.svg);
     background-position: 260px 31px;
     background-size: 32px 32px;
+    padding-left: 107px;
   }
   header .nav--active ul {
     width: 118px;
@@ -1079,7 +1130,6 @@ footer .name:hover {
         -ms-flex-direction: column;
             flex-direction: column;
     margin-top: 100px;
-    margin-left: 107px;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
@@ -1148,6 +1198,12 @@ footer .name:hover {
   }
   main .about .about-button {
     margin: 0 350px 30px 350px;
+  }
+  main .about .about-button .about-slider:nth-child(4) {
+    display: block;
+  }
+  main .about .about-button .about-slider:nth-child(5) {
+    display: block;
   }
   main .favorite {
     width: 768px;
