@@ -78,6 +78,51 @@ header{
             opacity: 0.5;
         }
     }
+    .dropMenu{
+        width: 80px;
+        height: 115px;
+        background: #FFF;
+        position: absolute;
+        left: 84rem;
+        top: 3.75rem;
+        display: none;
+        h5{
+            color: #000;
+            font-family: 'Inter', 'cursive';
+            font-size: 15px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 20px;
+            margin-top: 5px;
+            margin-left: 16px;
+        }
+        hr{
+            width: 40px;
+            height: 1px;
+            background: #BB945F;
+            margin-left: 20px;
+        }
+        .logs{
+            display: flex;
+            gap: 10px;
+            margin-top: 20px;
+            align-items: center;
+            flex-direction: column;
+            .logIn{
+                color: #000;
+                text-align: center;
+                font-family: 'Inter','cursive';
+                font-size: 15px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 20px;
+                &:hover{
+                    color: #BB945F;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
 }
 
 main{
@@ -199,6 +244,15 @@ main{
                 &:hover{
                     background: #BB945F;
                     cursor: pointer;
+                }
+                &:nth-child(4){
+                    display: none;
+                }
+                &:nth-child(5){
+                    display: none;
+                }
+                &.active{
+                    background: #BB945F;
                 }
             }
             &:hover{
@@ -468,7 +522,6 @@ main{
                     letter-spacing: 2px;
                     text-transform: capitalize;
                     width: 478px;
-                    text-align: center;
                     hr{
                         width: 100px;
                         height: 1px;
@@ -495,10 +548,8 @@ main{
                 }
             }
             .coffee-left{
-                align-items: center;
-                li{
-                    justify-content: flex-start;
-                }
+               
+                
             }
         }
     }
@@ -933,18 +984,19 @@ footer{
             height: 570px;
             background-color: #000;
             top: 0;
-            left: 135px;
+            left: 133px;
             z-index: 1;
             background-image: url(../images/icons/cross.svg);
             background-position: 260px 31px;
             background-size: 32px 32px;
+            padding-left: 107px;
             ul{
             width: 118px;
              height: 370px;
             display: inline-flex;
             flex-direction: column;
             margin-top: 100px;
-            margin-left: 107px;
+            
             align-items: center;
             }
         }
@@ -1011,6 +1063,14 @@ footer{
             }
             .about-button{
                 margin: 0 350px 30px 350px;
+                .about-slider{
+                    &:nth-child(4){
+                        display: block;
+                    }
+                    &:nth-child(5){
+                        display: block;
+                    }
+                }
             }
         }
         .favorite{
