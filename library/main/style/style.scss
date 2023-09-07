@@ -209,20 +209,36 @@ main{
             display: flex;
             align-items: flex-start;
             gap: 25px;
+            overflow-x: auto;
+            scroll-snap-type: x mandatory;
+            scroll-behavior: smooth;
+            scroll-snap-align: start;
             .image{
                 width: 450px;
                 height: 560px;
                 flex-shrink: 0;
                 background: url(../images/pictures/image\ 1.svg);
+                scroll-behavior: auto;
+                scroll-snap-align: start;
                 &:nth-child(2){
                     background: url(../images/pictures/image\ 2.svg);
                 }
                 &:nth-child(3){
                     background: url(../images/pictures/image\ 3.svg);
                 }
+                &:nth-child(4){
+                    background: url(../images/pictures/image4.svg);
+                }
+                &:nth-child(5){
+                    background: url(../images/pictures/image\ 5.svg);
+                }
             }
-            .arrow-left, .arrow-right{
+            .arrow{
                 display: none;
+                cursor: pointer;
+                &.right{
+                    background: url(../images/icons/ArrowLeft.svg);
+                }
             }
         }
         .about-button{
@@ -1004,6 +1020,13 @@ footer{
             position: relative;
             margin-right: 105px;
             z-index: 2;
+            &:hover{
+                cursor: pointer;
+            }
+        }
+        .dropMenu{
+            left: 39rem;
+            z-index: 2;
         }
     }
     main{
@@ -1041,25 +1064,31 @@ footer{
                     }&:nth-child(2){
                         display: none;
                     }
+                    &:nth-child(4){
+                        display: none;
+                    }&:nth-child(5){
+                        display: none;
+                    }
                 }
-                .arrow-left{
+                .arrow{
                     display: inline;
                     margin-top: 32px;
                     width: 24px;
                     height: 24px;
                 }
-                .arrow-left{
+                .arrow{
                     background: url(../images/icons/ArrowRight.svg);
                     background-repeat: no-repeat;
+                    
                 }
-                .arrow-right{
+                /*{
                     background: url(../images/icons/ArrowLeft.svg);
                     background-repeat: no-repeat;
                     display: inline;
                     margin-top: 32px;
                     width: 24px;
                     height: 24px;
-                }
+                }*/
             }
             .about-button{
                 margin: 0 350px 30px 350px;

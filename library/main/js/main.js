@@ -9,7 +9,7 @@ const menuLog = document.querySelector(".dropMenu");
 iconLog.addEventListener('mouseover', () => {
     menuLog.style.display = 'block'
 });
-menuLog.addEventListener('mouseout', () => {
+navigation.addEventListener('mouseout', () => {
     menuLog.style.display = 'none'
 });
 
@@ -21,7 +21,38 @@ buttons.forEach(button => {
     });
 })*/
 
-const circleButton = document.querySelector("about-slider");
+const slider = document.querySelector(".about-container");
+const arrowButtons = document.querySelectorAll(".arrow");
+const firstCard = slider.querySelector(".image").offsetWidth;
+
+let isDragging = false, startX, startScrollLeft;
+
+arrowButtons.forEach(btn => {
+    btn.addEventListener("click", () => {
+        slider.scrollLeft += btn.id == "left" ? -firstCard : firstCard; 
+    })
+});
+
+const dragStart = (e) =>{
+    isDragging = true;
+    startX = e.pageX;
+    startScrollLeft = slider.scrollLeft;
+}
+
+const dragging = (e) => {
+    if(!isDragging) return;
+    slider.scrollLeft = startScrollLeft -(e.pageX - startX); // update scroll position
+}
+
+const dragStop = (e) => {
+    isDragging = false;
+}
+
+slider.addEventListener('mousedown', dragStart);
+slider.addEventListener('mousemove', dragging);
+slider.addEventListener('mouseup', dragStop);
+
+const circleButton = document.querySelector(".about-slider");
 circleButton.addEventListener("click", () => {
     circleButton.classList.add("active");
 });

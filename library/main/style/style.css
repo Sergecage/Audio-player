@@ -244,6 +244,11 @@ main .about .about-container {
       -ms-flex-align: start;
           align-items: flex-start;
   gap: 25px;
+  overflow-x: auto;
+  -ms-scroll-snap-type: x mandatory;
+      scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  scroll-snap-align: start;
 }
 main .about .about-container .image {
   width: 450px;
@@ -251,6 +256,8 @@ main .about .about-container .image {
   -ms-flex-negative: 0;
       flex-shrink: 0;
   background: url(../images/pictures/image\ 1.svg);
+  scroll-behavior: auto;
+  scroll-snap-align: start;
 }
 main .about .about-container .image:nth-child(2) {
   background: url(../images/pictures/image\ 2.svg);
@@ -258,8 +265,18 @@ main .about .about-container .image:nth-child(2) {
 main .about .about-container .image:nth-child(3) {
   background: url(../images/pictures/image\ 3.svg);
 }
-main .about .about-container .arrow-left, main .about .about-container .arrow-right {
+main .about .about-container .image:nth-child(4) {
+  background: url(../images/pictures/image4.svg);
+}
+main .about .about-container .image:nth-child(5) {
+  background: url(../images/pictures/image\ 5.svg);
+}
+main .about .about-container .arrow {
   display: none;
+  cursor: pointer;
+}
+main .about .about-container .arrow.right {
+  background: url(../images/icons/ArrowLeft.svg);
 }
 main .about .about-button {
   width: 173px;
@@ -1139,6 +1156,13 @@ footer .name:hover {
     margin-right: 105px;
     z-index: 2;
   }
+  header .icon-log:hover {
+    cursor: pointer;
+  }
+  header .dropMenu {
+    left: 39rem;
+    z-index: 2;
+  }
   main .welcome {
     width: 768px;
     height: 600px;
@@ -1171,6 +1195,14 @@ footer .name:hover {
     margin-left: 88px;
     margin-bottom: 0;
     margin-top: 0;
+    /*{
+        background: url(../images/icons/ArrowLeft.svg);
+        background-repeat: no-repeat;
+        display: inline;
+        margin-top: 32px;
+        width: 24px;
+        height: 24px;
+    }*/
   }
   main .about .about-container .image:nth-child(3) {
     display: none;
@@ -1178,23 +1210,21 @@ footer .name:hover {
   main .about .about-container .image:nth-child(2) {
     display: none;
   }
-  main .about .about-container .arrow-left {
+  main .about .about-container .image:nth-child(4) {
+    display: none;
+  }
+  main .about .about-container .image:nth-child(5) {
+    display: none;
+  }
+  main .about .about-container .arrow {
     display: inline;
     margin-top: 32px;
     width: 24px;
     height: 24px;
   }
-  main .about .about-container .arrow-left {
+  main .about .about-container .arrow {
     background: url(../images/icons/ArrowRight.svg);
     background-repeat: no-repeat;
-  }
-  main .about .about-container .arrow-right {
-    background: url(../images/icons/ArrowLeft.svg);
-    background-repeat: no-repeat;
-    display: inline;
-    margin-top: 32px;
-    width: 24px;
-    height: 24px;
   }
   main .about .about-button {
     margin: 0 350px 30px 350px;
