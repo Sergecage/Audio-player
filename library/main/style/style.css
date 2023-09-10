@@ -211,6 +211,9 @@ header .popUpLog button {
   border-radius: 2px;
   border: 1px solid #0C0C0E;
 }
+header .popUpLog button:hover {
+  cursor: pointer;
+}
 header .popUpLog h6 {
   margin-left: 20px;
   color: #000;
@@ -301,6 +304,9 @@ header .register button {
   height: 30px;
   border-radius: 2px;
   border: 1px solid #0C0C0E;
+}
+header .register button:hover {
+  cursor: pointer;
 }
 header .register h6 {
   margin-left: 20px;
