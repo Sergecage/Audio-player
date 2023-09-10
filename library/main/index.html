@@ -29,9 +29,37 @@
             <h5>Profile</h5>
             <hr>
             <div class="logs">
-                <a class="logIn">Log In</a>
-                <a class="logIn">Register</a>
+                <a class="logIn" href="#popUpLog">Log In</a>
+                <a class="registerForm" href="#register">Register</a>
             </div>
+        </div>
+        <div class="popUpLog" id="popUpLog">
+            <h3>Login</h3>
+            <div class="close"></div>
+            <form>
+                <label>E-mail or readers card</label>
+                <input type="tetx">
+                <label>Password</label>
+                <input type="tetx">
+            </form>
+            <button>Log In</button>
+            <h6>Don&apos;t have an account?</h6>
+            <a href=".register">Register</a>
+        </div>
+        <div class="popUpLog register" id="register">
+            <h3>Register</h3>
+            <div class="closer"></div>
+            <form>
+                <label>First name</label>
+                <input type="tetx">
+                <label>Last name</label>
+                <input type="tetx">
+                <label>E-mail</label>
+                <input type="tetx">
+                <button>Sign Up</button>
+            </form>
+            <h6>Already have an account?</h6>
+            <a href=".register">Login</a>
         </div>
     </header>
 
@@ -47,11 +75,13 @@
         <h3>The Brooklyn Library is a free workspace, a large number of books and 
             a cozy coffee shop inside</h3>
             <div class="about-container" data-carousel="">
-                <div class="arrow-left" carousel-button="prev"></div>
-                <div class="image"></div>
-                <div class="image"></div>
-                <div class="image"></div>
-                <div class="arrow-right" carousel-button="next"></div>
+                <div class="arrow" id="left" carousel-button="prev"><img src="images/icons/ArrowRight.svg" alt="arrowLeft"></div>
+                <div class="image"><img src="images/pictures/image 1.svg" alt="image"></div>
+                <div class="image"><img src="images/pictures/image 2.svg" alt="image"></div>
+                <div class="image"><img src="images/pictures/image 3.svg" alt="image"></div>
+                <div class="image"><img src="images/pictures/image4.svg" alt="image"></div>
+                <div class="image"><img src="images/pictures/image 5.svg" alt="image"></div>
+                <div class="arrow right" id="right" carousel-button="next"><img src="images/icons/ArrowLeft.svg" alt="arrowright"></div>
             </div>
             <div class="about-button">
                 <button class="about-slider active"></button>
