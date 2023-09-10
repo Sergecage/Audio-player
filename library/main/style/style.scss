@@ -182,6 +182,9 @@ header{
             height: 30px;
             border-radius: 2px;
             border: 1px solid #0C0C0E;
+            &:hover{
+                cursor: pointer;
+            }
         }
         h6{
             margin-left: 20px;
@@ -266,6 +269,9 @@ header{
             height: 30px;
             border-radius: 2px;
             border: 1px solid #0C0C0E;
+            &:hover{
+                cursor: pointer;
+            }
         }
         h6{
             margin-left: 20px;
