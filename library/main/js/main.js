@@ -38,37 +38,38 @@ closeReg.addEventListener('click', () => {
 });
 
 const slider = document.querySelector(".about-container");
+const imageSlider = document.querySelector(".image-container")
 const arrowButtons = document.querySelectorAll(".arrow");
 const firstCard = slider.querySelector(".image").offsetWidth;
 const sliderElements = [...slider.children];
 
 let isDragging = false, startX, startScrollLeft,timeoutId;
 //number of cards per display
-let imagePerView = Math.round(slider.offsetWidth / firstCard);
+let imagePerView = Math.round(imageSlider.offsetWidth / firstCard);
 //infinite scrolling
 sliderElements.slice(-imagePerView).reverse().forEach(image => {
-    slider.insertAdjacentHTML("afterbegin", image.outerHTML);
+    imageSlider.insertAdjacentHTML("afterbegin", image.outerHTML);
 });
 
 sliderElements.slice(0,imagePerView).forEach(image => {
-    slider.insertAdjacentHTML("beforeend", image.outerHTML);
+    imageSlider.insertAdjacentHTML("beforeend", image.outerHTML);
 });
 
 arrowButtons.forEach(btn => {
     btn.addEventListener("click", () => {
-        slider.scrollLeft += btn.id == "left" ? -firstCard : firstCard; 
+        imageSlider.scrollLeft += btn.id == "left" ? -firstCard : firstCard; 
     })
 });
 
 const dragStart = (e) =>{
     isDragging = true;
     startX = e.pageX;
-    startScrollLeft = slider.scrollLeft;
+    startScrollLeft = imageSlider.scrollLeft;
 }
 
 const dragging = (e) => {
     if(!isDragging) return;
-    slider.scrollLeft = startScrollLeft -(e.pageX - startX); // update scroll position
+    imageSlider.scrollLeft = startScrollLeft -(e.pageX - startX); // update scroll position
 }
 
 const dragStop = (e) => {
@@ -77,27 +78,27 @@ const dragStop = (e) => {
 
 const autoPlay = () => {
     if (window.innerWidth < 800) return;
-    timeoutId = setTimeout(() => slider.scrollLeft += firstCard, 2500);
+    timeoutId = setTimeout(() => imageSlider.scrollLeft += firstCard, 2500);
 }
 autoPlay();
 
 const infiniteScroll = () => {
-    if(slider.scrollLeft === 0) {
-        slider.classList.add("no_transition");
-        slider.scrollLeft = slider.scrollWidth - ( 2* slider.offsetWidth);
-        slider.classList.remove("no_transition");
-    } else if(slider.scrollLeft === slider.scrollWidth - slider.offsetWidth){
-        slider.classList.add("no_transition");
-        slider.scrollLeft = slider.offsetWidth;
-        slider.classList.remove("no_transition");
+    if(imageSlider.scrollLeft === 0) {
+        imageSlider.classList.add("no_transition");
+        imageSlider.scrollLeft = imageSlider.scrollWidth - ( 2* imageSlider.offsetWidth);
+        imageSlider.classList.remove("no_transition");
+    } else if(imageSlider.scrollLeft === imageSlider.scrollWidth - imageSlider.offsetWidth){
+        imageSlider.classList.add("no_transition");
+        imageSlider.scrollLeft = imageSlider.offsetWidth;
+        imageSlider.classList.remove("no_transition");
     }
 
     clearTimeout(timeoutId);
     if(!slider.matches(":hover")) autoPlay()
 }
 
-slider.addEventListener('mousedown', dragStart);
-slider.addEventListener('mousemove', dragging);
+imageSlider.addEventListener('mousedown', dragStart);
+imageSlider.addEventListener('mousemove', dragging);
 document.addEventListener('mouseup', dragStop);
 slider.addEventListener('scroll', infiniteScroll);
 
