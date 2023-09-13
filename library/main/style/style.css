@@ -426,13 +426,6 @@ main .about .about-container {
   width: 1400px;
   height: 560px;
   margin: 20px 20px 40px 20px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
-  gap: 25px;
   overflow-x: auto;
   -ms-scroll-snap-type: x mandatory;
       scroll-snap-type: x mandatory;
@@ -442,7 +435,21 @@ main .about .about-container {
 main .about .about-container::-webkit-scrollbar {
   display: none;
 }
-main .about .about-container .image {
+main .about .about-container .image-container {
+  overflow-x: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  gap: 25px;
+  -ms-scroll-snap-type: none;
+      scroll-snap-type: none;
+  scroll-behavior: smooth;
+  scroll-snap-align: start;
+}
+main .about .about-container .image-container .image {
   width: 450px;
   height: 560px;
   -ms-flex-negative: 0;
@@ -453,14 +460,14 @@ main .about .about-container .image {
       scroll-snap-type: none;
 }
 main .about .about-container .arrow {
-  position: fixed;
+  position: absolute;
   display: none;
   left: 88px;
-  top: 1100px;
+  top: 1150px;
   cursor: pointer;
 }
 main .about .about-container .arrow.right {
-  left: 580px;
+  left: 640px;
 }
 main .about .about-container .no-transition {
   scroll-behavior: auto;
@@ -1382,6 +1389,10 @@ footer .name:hover {
     margin-left: 88px;
     margin-bottom: 0;
     margin-top: 0;
+  }
+  main .about .about-container .image-container {
+    width: 450px;
+    gap: 0;
   }
   main .about .about-container .arrow {
     display: inline;

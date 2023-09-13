@@ -381,9 +381,6 @@ main{
             width: 1400px;
             height: 560px;
             margin: 20px 20px 40px 20px;
-            display: flex;
-            align-items: flex-start;
-            gap: 25px;
             overflow-x: auto;
             scroll-snap-type: x mandatory;
             scroll-behavior: smooth;
@@ -391,23 +388,32 @@ main{
             &::-webkit-scrollbar{
                 display: none;
             }
-            .image{
-                width: 450px;
-                height: 560px;
-                flex-shrink: 0;
-                
-                scroll-behavior: auto;
-                scroll-snap-align: start;
-                scroll-snap-type: none;
+            .image-container{
+                overflow-x: auto;
+                display: flex;
+            align-items: flex-start;
+            gap: 25px;
+            scroll-snap-type: none;
+            scroll-behavior: smooth;
+            scroll-snap-align: start;
+                .image{
+                    width: 450px;
+                    height: 560px;
+                    flex-shrink: 0;
+                    
+                    scroll-behavior: auto;
+                    scroll-snap-align: start;
+                    scroll-snap-type: none;
+                }
             }
             .arrow{
-                position: fixed;
+                position: absolute;
                 display: none;
                 left: 88px;
-                top: 1100px;
+                top: 1150px;
                 cursor: pointer;
                 &.right{
-                    left: 580px;
+                    left: 640px;
                 }
             }
             .no-transition{
@@ -1206,9 +1212,6 @@ footer{
         .welcome{
             width: 768px;
             height: 600px;
-            .welcome-black{
-
-            }
         }
         .about{
             width: 768px;
@@ -1231,8 +1234,9 @@ footer{
                 margin-left: 88px;
                 margin-bottom: 0;
                 margin-top: 0;
-                .image{
-                    
+                .image-container{
+                    width: 450px;
+                    gap: 0;
                 }
                 .arrow{
                     display: inline;
