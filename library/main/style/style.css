@@ -152,6 +152,7 @@ header .popUpLog {
   height: 262px;
   background: #FFF;
   display: none;
+  z-index: 2;
 }
 header .popUpLog h3 {
   color: #000;
@@ -246,6 +247,7 @@ header .register {
   height: 342px;
   background: #FFF;
   display: none;
+  z-index: 2;
 }
 header .register h3 {
   color: #000;
@@ -437,6 +439,10 @@ main .about .about-container::-webkit-scrollbar {
 }
 main .about .about-container .image-container {
   overflow-x: auto;
+  -ms-scroll-snap-type: none;
+      scroll-snap-type: none;
+  scroll-behavior: smooth;
+  scroll-snap-align: start;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -444,10 +450,6 @@ main .about .about-container .image-container {
       -ms-flex-align: start;
           align-items: flex-start;
   gap: 25px;
-  -ms-scroll-snap-type: none;
-      scroll-snap-type: none;
-  scroll-behavior: smooth;
-  scroll-snap-align: start;
 }
 main .about .about-container .image-container .image {
   width: 450px;
@@ -508,8 +510,8 @@ main .about .about-button .about-slider.active {
   background: #BB945F;
 }
 main .about .about-button:hover {
-  width: 72px;
-  height: 21px;
+  width: 192px;
+  height: 31px;
 }
 main .favorite {
   width: 1440px;
