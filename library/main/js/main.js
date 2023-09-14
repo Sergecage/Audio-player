@@ -40,9 +40,9 @@ closeReg.addEventListener('click', () => {
 //slider in about section
 const slider = document.querySelector(".about-container");
 const imageSlider = document.querySelector(".image-container")
-const arrowButtons = document.querySelectorAll(".arrow");
+const arrowButtons = document.querySelectorAll(".about-container .arrow");
 const firstCard = slider.querySelector(".image").offsetWidth;
-const sliderElements = [...slider.children];
+const sliderElements = [...imageSlider.children];
 
 let isDragging = false, startX, startScrollLeft,timeoutId;
 //number of cards per display
@@ -111,6 +111,29 @@ circleButton.addEventListener("click", () => {
 //pagination 
 const sliderButton = document.querySelectorAll(".about-slider");
 
+let currentIndex = 0;
+
+const pagNext = (e) => {
+    let pagActive = e.target.dataset.num;
+    if (pagActive == currentIndex) {
+        return;
+    } else {
+        removeClass();
+        currentIndex = pagActive;
+        changeSlide();
+        activeButton();
+    }
+}
+
+sliderButton.forEach((pag => {
+    pag.setAttribute("data-slide");
+    pag.addEventListener("click", pagNext)
+}));
+
+const changeSlide = () => {
+    let slidePosition = slider.firstElementChild.slideWidth;
+    
+}
 /*sliderButton.forEach( el => {
     el.classList.remove('active');
     el[id].classList.add('active');
