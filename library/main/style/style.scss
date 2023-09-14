@@ -387,9 +387,7 @@ main{
             scroll-snap-type: x mandatory;
             scroll-behavior: smooth;
             scroll-snap-align: start;
-            &::-webkit-scrollbar{
-                display: none;
-            }
+            scrollbar-width: none;
             .image-container{
                 overflow-x: auto;
             scroll-snap-type: none;
@@ -405,6 +403,12 @@ main{
                     scroll-behavior: auto;
                     scroll-snap-align: start;
                     scroll-snap-type: none;
+                }
+                &.no_transition{
+                    scroll-behavior: auto;
+                }
+                &::-webkit-scrollbar{
+                    display: none;
                 }
             }
             .arrow{
