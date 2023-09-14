@@ -37,6 +37,7 @@ closeReg.addEventListener('click', () => {
     registerForm.style.display = "none";
 });
 
+//slider in about section
 const slider = document.querySelector(".about-container");
 const imageSlider = document.querySelector(".image-container")
 const arrowButtons = document.querySelectorAll(".arrow");
