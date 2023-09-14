@@ -433,9 +433,7 @@ main .about .about-container {
       scroll-snap-type: x mandatory;
   scroll-behavior: smooth;
   scroll-snap-align: start;
-}
-main .about .about-container::-webkit-scrollbar {
-  display: none;
+  scrollbar-width: none;
 }
 main .about .about-container .image-container {
   overflow-x: auto;
@@ -460,6 +458,12 @@ main .about .about-container .image-container .image {
   scroll-snap-align: start;
   -ms-scroll-snap-type: none;
       scroll-snap-type: none;
+}
+main .about .about-container .image-container.no_transition {
+  scroll-behavior: auto;
+}
+main .about .about-container .image-container::-webkit-scrollbar {
+  display: none;
 }
 main .about .about-container .arrow {
   position: absolute;
