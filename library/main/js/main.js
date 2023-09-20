@@ -113,7 +113,14 @@ const sliderButton = document.querySelectorAll(".about-slider");
 
 let currentIndex = 0;
 
-const pagNext = (e) => {
+const changeSlide = () => {
+    (sliderButton + currentIndex).active = true;
+    currentIndex++;
+    if (currentIndex > 4) {
+        currentIndex = 0;
+    }
+};
+/*const pagNext = (e) => {
     let pagActive = e.target.dataset.num;
     if (pagActive == currentIndex) {
         return;
@@ -132,7 +139,7 @@ sliderButton.forEach((pag => {
 
 const changeSlide = () => {
     let slidePosition = slider.firstElementChild.slideWidth;
-    
+
 }
 /*sliderButton.forEach( el => {
     el.classList.remove('active');
