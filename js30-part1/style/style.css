@@ -96,15 +96,24 @@ body {
 .container .progress {
   position: absolute;
   z-index: 4;
-  height: 0.5rem;
+  height: 0.3rem;
   background-color: #000000;
   width: 15rem;
   top: 92%;
   left: 19%;
-  -webkit-appearance: none;
-     -moz-appearance: none;
-          appearance: none;
+  -moz-appearance: none;
+       appearance: none;
   cursor: pointer;
+  -webkit-appearance: none;
+}
+.container .progress::-webkit-slider-thumb {
+  -webkit-appearance: none;
+          appearance: none;
+  background: #fff;
+  width: 1rem;
+  height: 1rem;
+  border-radius: 50%;
+  border: 1px solid #a259d3;
 }
 .container .current {
   position: absolute;
