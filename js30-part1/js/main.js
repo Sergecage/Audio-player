@@ -46,46 +46,42 @@ play.addEventListener('click', () => {
 //select the song
 const nextSong = () => {
     songNum++;
-
-    if (songLine > songs.length -1) {
-        songLine = 0;
+    if (songNum > songs.length -1) {
+        songNum = 0;
     }
     songLine(songs[songNum], images[songNum], artists[songNum], names[songNum]);
     song.play();
-}
+};
 
-next.addEventListener('click', nextSong)
-//display duration and current time 
-const displayTimer = () => {
-    const { durationTime, currentTime} = song;
-    progress.max = durationTime;
-    progress.value = currentTime;
-    current.textContent = timer(current);
-    if (! durationTime) {
-        duration.textContent = `0:00`;
-    } else {
-        duration.textContent = timer(durationTime);
+next.addEventListener('click', nextSong);
+
+const prevSong = () => {
+    songNum--;
+    if (songNum < 0) {
+        songNum = songs.length -1;
     }
+    songLine(songs[songNum], images[songNum], artists[songNum], names[songNum]);
+    song.play();
+};
+prev.addEventListener('click', prevSong);
+
+//display duration and current time 
+const displayTimer = (e) => {
+    const { durationTime, currentTime} = e.srcElement;
+    const progressPercent = (currentTime / durationTime) * 100;
+    progress.style.width = `${progressPercent}%`;
 }
 
-const timer = (count) => {
-    const minutes = Math.floor( count / 60);
-    const seconds = Math.floor( count - minutes * 60);
-    return `${minutes}:${seconds < 10 ? "0" + seconds : seconds}`;
-}
+song.addEventListener('timeupdate', displayTimer);
 
-progress.addEventListener("timeupdate", () => {
-    song.currentTime = this.value;
-})
+//rewind function
+const rewind = (e) => {
+    const progressWidth = this.clientWidth;
+    const point = e.offsetX;
+    const songTime = song.durationTime;
+    song.currentTime = (point / progressWidth ) * songTime;
+};
+progress.addEventListener('click', rewind);
 
-displayTimer();
-
-const interval = this.setInterval(() => {
-    displayTimer();
-}, 500);
-/*song.onloadedmetadata = () => {
-    progress.max = song.duration;
-    progress.min = song.current;
-}
-
-*/
+//Autoply
+song.addEventListener('ended', nextSong);
