@@ -85,5 +85,17 @@ const rewind = (e) => {
 };
 progress.addEventListener('click', rewind);
 
-//Autoply
-song.addEventListener('ended', nextSong, play.src = "images/icons/pause.png");
+//Autoplay
+song.addEventListener('ended', nextSong);
+
+const timer = (output, input) => {
+    const minutes = Math.floor(input / 60);
+    const seconds = Math.floor( input % 60);
+    if (seconds < 10) {
+        output.innerHTML = minutes + ":0" +seconds;
+    } else {
+        output.innerHTML = minutes + ":" +seconds;
+    }
+}
+
+timer(durationTime,song.currentTime)
