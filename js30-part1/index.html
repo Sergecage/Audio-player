@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS30-mediaplayer</title>
+    <link rel="stylesheet" href="style/style.css">
+    <script src="js/main.js" async></script>
+    <link rel="apple-touch-icon" sizes="180x180" href="images/icons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/icons/favicon-16x16.png">
+    <link rel="manifest" href="images/icons/site.webmanifest">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header></header>
+    <main>
+        <img src="images/pictures/lemonade.png" alt="background-image" class="background">
+        <audio src="music/beyonce.mp3" id="song"></audio>
+        <div class="container">
+            <div class="player"></div>
+            <img src="images/pictures/lemonade.png" alt="player-image" class="image-player">
+            <img src="images/icons/play.png" alt="play" class="play pause">
+            <img src="images/icons/forward.png" alt="next-button" class="next-track">
+            <img src="images/icons/backward.png" alt="prev-button" class="prev-track">
+            <h2 class="artist-name">Beyonce</h2>
+            <h4 class="artist-song">Don't hurt yourself</h4>
+            <input type="range" class="progress" id="progress" min="0" max="233.717551" value="0">
+            <div class="current">0:00</div>
+            <div class="duration">0:00</div>
+        </div>
+    </main>
+    <footer>
+        <a href="https://github.com/Sergecage">Sergei Keidzh</a>
+        <h5>2023</h5>
+        <a href="https://rs.school/js-stage0/"><img src="images/icons/rs_school_js (1).svg"></a>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,188 @@
+body {
+    font-family: 'Roboto', sans-serif ;
+}
+
+.background{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    filter: blur(10px);
+    z-index: -1;
+    top: 0;
+    left: 0;
+}
+
+.container{
+    position: absolute;
+    width: 350pt;
+    height: 350pt;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 15px;
+    box-shadow: 0 0 15px #000;
+    top: 25%;
+    left: 40%;
+    overflow: hidden;
+    .player{
+        width: 100%;
+        height: 15vh;
+        position: absolute;
+        top: 70%;
+        background-color: #638a67;
+        z-index: 3;   
+    }
+    .image-player{
+        width: 100%;
+        position: absolute;
+        height: 100%;
+    }
+    .play{
+        position: absolute;
+        width: 3rem;
+        height: 3rem;
+        z-index: 3;
+        border-radius: 50%;
+        border: .5px solid #000000;
+        top: 75%;
+        left: 5%;
+        cursor: pointer;
+        background-color: #a259d3;
+    }
+    .next-track, .prev-track{
+        position: absolute;
+        width: 3rem;
+        height: 3rem;
+        z-index: 3;
+        background-color: #a259d3;
+        border-radius: 50%;
+        color: #fff;
+        cursor: pointer;
+    }
+    .next-track{
+        top: 75%;
+        left: 75%;
+    }
+    .prev-track{
+        top: 87%;
+        left: 75%;
+    }
+    .artist-name{
+        position: absolute;
+        font-size: 2em;
+        color: #fff;
+        top: 68%;
+        left: 20%;
+        z-index: 3;
+    }
+    .artist-song{
+        position: absolute;
+        font-size: 1.5em;
+        color: #000;
+        z-index: 3;
+        top: 76%;
+        left: 20%;
+    }
+    .progress{
+        position: absolute;
+        z-index: 4;
+        height: .3rem;
+        background-color: #000000;
+        width: 15rem;
+        top: 92%;
+        left: 19%;
+        appearance: none;
+        cursor: pointer;
+        -webkit-appearance: none;
+        &::-webkit-slider-thumb{
+            appearance: none;
+            background: #fff;
+            width: 1rem;
+            height: 1rem;
+            border-radius: 50%;
+            border: 1px solid #a259d3;
+        }
+    }
+    .current{
+        position: absolute;
+        width: 1rem;
+        height: 1rem;
+        top: 95%;
+        left: 19%;
+        z-index: 4;
+    }
+    .duration{
+        position: absolute;
+        width: 1rem;
+        height: 1rem;
+        top: 88%;
+        left: 68%;
+        z-index: 4;
+    }
+}
+
+footer{
+    position: relative;
+    margin-top: 43%;
+    display: flex;
+    flex-direction: row;
+    gap: 30%;
+    a{
+        text-decoration: none;
+        width: 8rem;
+        height: 8rem;
+        margin-left: 10%;
+        color: #fff;
+        font-size: 1.2em;
+        margin-top: 1%;
+    }
+    h5{
+        color: #fff;
+        font-size: 1.2em;
+    }
+}
+
+@media screen and (width: 768px ){ 
+    .container{
+        left: 20%;
+        top: 10%;
+        .player{
+            height: 20vh; 
+        }
+    }
+    footer{
+        margin-top: 80%;
+        gap: 10%;
+        a{
+            margin-top: 5%;
+        }
+    }
+}
+
+@media screen and (width: 320px ){ 
+    main{
+        .background{
+            position: relative;
+            width: 200vw;
+            height: 200vh;
+        }
+    }
+    .container{
+        left: 20%;
+        .player{
+            height: 40vh;          
+        }
+    }
+    footer{
+       margin-top: -70%;
+       gap: 5%;
+        a{
+           width: 12rem;
+           height: 12rem;
+        }
+        h5{
+            margin-top: 5%;
+        }
+    }
+}
