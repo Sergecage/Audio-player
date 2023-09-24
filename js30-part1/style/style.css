@@ -157,3 +157,44 @@ footer h5 {
   color: #fff;
   font-size: 1.2em;
 }
+
+@media screen and (width: 768px) {
+  .container {
+    left: 20%;
+    top: 10%;
+  }
+  .container .player {
+    height: 20vh;
+  }
+  footer {
+    margin-top: 80%;
+    gap: 10%;
+  }
+  footer a {
+    margin-top: 5%;
+  }
+}
+@media screen and (width: 320px) {
+  main .background {
+    position: relative;
+    width: 200vw;
+    height: 200vh;
+  }
+  .container {
+    left: 20%;
+  }
+  .container .player {
+    height: 40vh;
+  }
+  footer {
+    margin-top: -70%;
+    gap: 5%;
+  }
+  footer a {
+    width: 12rem;
+    height: 12rem;
+  }
+  footer h5 {
+    margin-top: 5%;
+  }
+}

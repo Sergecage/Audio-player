@@ -3,7 +3,7 @@ const play = document.querySelector('.play');
 const container = document.querySelector('.container');
 const player = document.querySelector('.player');
 const progress = document.querySelector('.progress');
-const duration = document.querySelector('.duration');
+const durationTime = document.querySelector('.duration');
 const current = document.querySelector('.current');
 const prev = document.querySelector('.prev-track');
 const next = document.querySelector('.next-track');
@@ -11,10 +11,10 @@ const songName = document.querySelector('.artist-song');
 const songArtist = document.querySelector('.artist-name');
 const songImage = document.querySelector('.image-player');
 const backImage = document.querySelector('.background');
-const songs = ['beyonce', 'dontstartnow', 'Journey - Don`t stop believing', 'Beethoven'];
-const images =['lemonade','dontstartnow', 'journey', 'beethoven'];
-const artists = ['Beyonce', 'Dua Lipa', 'Journey' , 'beethoven'];
-const names = ['Don`t hurt yourself', 'Don`t start now', 'Don`t stop believing' , 'Beethoven'];
+const songs = ['beyonce', 'dontstartnow', 'Journey - Don`t Stop Believin', 'Beethoven', 'Lowrider'];
+const images =['lemonade','dontstartnow', 'journey', 'beethoven', 'Lowrider'];
+const artists = ['Beyonce', 'Dua Lipa', 'Journey' , 'Beethoven', 'War'];
+const names = ['Don`t hurt yourself', 'Don`t start now', "Don't stop believing" , 'Beethoven', 'Lowrider'];
 let songNum = 0;
 let playing = true;
 
@@ -51,6 +51,7 @@ const nextSong = () => {
     }
     songLine(songs[songNum], images[songNum], artists[songNum], names[songNum]);
     song.play();
+    play.src = "images/icons/pause.png"
 };
 
 next.addEventListener('click', nextSong);
@@ -62,13 +63,14 @@ const prevSong = () => {
     }
     songLine(songs[songNum], images[songNum], artists[songNum], names[songNum]);
     song.play();
+    play.src = "images/icons/pause.png"
 };
 prev.addEventListener('click', prevSong);
 
 //display duration and current time 
 const displayTimer = (e) => {
-    const { durationTime, currentTime} = e.srcElement;
-    const progressPercent = (currentTime / durationTime) * 100;
+    const { duration, currentTime} = e.srcElement;
+    const progressPercent = (currentTime / duration) * 100;
     progress.style.width = `${progressPercent}%`;
 }
 
@@ -84,4 +86,4 @@ const rewind = (e) => {
 progress.addEventListener('click', rewind);
 
 //Autoply
-song.addEventListener('ended', nextSong);
+song.addEventListener('ended', nextSong, play.src = "images/icons/pause.png");
