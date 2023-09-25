@@ -72,6 +72,12 @@ const displayTimer = (e) => {
     const { duration, currentTime} = e.srcElement;
     const progressPercent = (currentTime / duration) * 100;
     progress.style.width = `${progressPercent}%`;
+    current.innerHTML = `${String(Math.floor(song.currentTime / 60)).padStart(2, "0")}:${String(
+        Math.floor(song.currentTime % 60)
+      ).padStart(2, "0")}`;
+    durationTime.innerHTML = `${String(Math.floor(song.duration / 60)).padStart(2, "0")}:${String(
+        Math.floor(song.duration % 60)
+      ).padStart(2, "0")}`
 }
 
 song.addEventListener('timeupdate', displayTimer);
@@ -80,22 +86,10 @@ song.addEventListener('timeupdate', displayTimer);
 const rewind = (e) => {
     const progressWidth = this.clientWidth;
     const point = e.offsetX;
-    const songTime = song.durationTime;
+    const songTime = song.duration;
     song.currentTime = (point / progressWidth ) * songTime;
 };
 progress.addEventListener('click', rewind);
 
 //Autoplay
 song.addEventListener('ended', nextSong);
-
-const timer = (output, input) => {
-    const minutes = Math.floor(input / 60);
-    const seconds = Math.floor( input % 60);
-    if (seconds < 10) {
-        output.innerHTML = minutes + ":0" +seconds;
-    } else {
-        output.innerHTML = minutes + ":" +seconds;
-    }
-}
-
-timer(durationTime,song.currentTime)
