@@ -11,10 +11,11 @@ const songName = document.querySelector('.artist-song');
 const songArtist = document.querySelector('.artist-name');
 const songImage = document.querySelector('.image-player');
 const backImage = document.querySelector('.background');
-const songs = ['beyonce', 'dontstartnow', 'Journey - Don`t Stop Believin', 'Beethoven', 'Lowrider'];
-const images =['lemonade','dontstartnow', 'journey', 'beethoven', 'Lowrider'];
-const artists = ['Beyonce', 'Dua Lipa', 'Journey' , 'Beethoven', 'War'];
-const names = ['Don`t hurt yourself', 'Don`t start now', "Don't stop believing" , 'Beethoven', 'Lowrider'];
+const speedUp = document.querySelector('.speedUp');
+const songs = ['beyonce', 'dontstartnow', 'Journey - Don`t Stop Believin', 'Beethoven', 'Lowrider', 'Light of Darkness - The Death '];
+const images =['lemonade','dontstartnow', 'journey', 'beethoven', 'Lowrider', 'LoD'];
+const artists = ['Beyonce', 'Dua Lipa', 'Journey' , 'Beethoven', 'War', 'Light of Darkness'];
+const names = ['Don`t hurt yourself', 'Don`t start now', "Don't stop believing" , 'Beethoven', 'Lowrider', 'Death'];
 let songNum = 0;
 let playing = true;
 
@@ -93,3 +94,10 @@ progress.addEventListener('click', rewind);
 
 //Autoplay
 song.addEventListener('ended', nextSong);
+
+//speedUp 
+const increaseSpeed = () => {
+    song.playbackRate = 1.5;
+};
+
+speedUp.addEventListener('click', increaseSpeed);
