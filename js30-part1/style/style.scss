@@ -120,6 +120,21 @@ body {
         left: 65%;
         z-index: 4;
     }
+    .speedUp{
+        position: relative;
+        width: 2rem;
+        height: 1rem;
+        color: #fff;
+        background-color: #a259d3;
+        padding: auto;
+        text-align: center;
+        align-items: center;
+        top: 42%;
+        left: -35%;
+        z-index: 3;
+        cursor: pointer;
+        border: solid black;
+    }
 }
 
 footer{
