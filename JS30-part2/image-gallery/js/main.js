@@ -16,7 +16,7 @@ const getData = async (receivedData) => {
     const data = await res.json();
     if ( coverPage  == 1) {
         container.innerHTML = "";
-    }
+    } 
     const results = data.results;
 
     //add elemnts to html page
@@ -41,8 +41,25 @@ search.addEventListener('submit', (e) => {
     coverPage = 1;
     getData();
 });
+ const onloadPage = async (searchQuery) => {
+    searchQuery = 'cat';
+    const url = `https://api.unsplash.com/search/photos?page=${coverPage}&query=${searchQuery}&client_id=${access}&orientation=portrait`;
+    const res = await fetch(url);
+    const data = await res.json();
+    const results = data.results;
+    results.map ((el) => {
+        const card = document.createElement('div');
+        card.classList.add('.card');
+        container.append(card);
+        const image = document.createElement('img');
+        image.src = el.urls.small;
+        image.classList.add('.card-image');
+        image.alt = el.alt_description;
+        card.append(image);
+    });
+ };
 
-document.addEventListener('DOMContenLoaded', getData('cat'));
+document.addEventListener('DOMContenLoaded', onloadPage());
 
 //add close while typing in input
 input.addEventListener('keydown', () => {
