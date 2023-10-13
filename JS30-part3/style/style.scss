@@ -30,7 +30,7 @@ main{
             border: 1px solid #fff;
             border-radius: 5%;
             cursor: pointer;
-            background-color: #adac5d;
+            background-color: #cecec0;
             padding: auto;
             a{
                 text-decoration: none;
@@ -43,17 +43,24 @@ main{
             }
         }
     }
+    .game-info{
+        font-family: var(--main-font);
+        color: #fff;
+        font-size: 2rem;
+        position: relative;
+        left: 31%;
+    }
     .container{
         display: grid;
         grid-template-columns: repeat(4, auto);
         grid-gap: 0.8rem;
         justify-content: center;
-        margin-top: 2.2rem;
+        margin-top: 2rem;
         perspective: 500px;
         .card{
             position: relative;
-            height: 7rem;
-            width: 5rem;
+            height: 10rem;
+            width: 8rem;
             cursor: pointer;
             .card-face{
                 position: absolute;
@@ -92,6 +99,7 @@ main{
             &.visible{
                 .card-back{
                     transform: rotateY(-180deg);
+                    pointer-events: none;
                 }
                 .card-front{
                     transform: rotateX(0);
@@ -102,37 +110,34 @@ main{
             }
         }
     }
-}
-.end-of-game{
-    display: none;
-    position:fixed;
-    display: flex;
-    justify-content: center;
-    top: 30%;
-    left: 10%;
-    z-index: 100;
-    span{
+    .of-game{
         display: none;
+        position:fixed;
+        justify-content: center;
+        top: 30%;
+        left: 15%;
+        z-index: 100;
         color: #e47e2a;
         font-family: var(--main-font);
-        font-size: 5em;
+        cursor: pointer;
+        &.visible{
+            display: flex;
+            animation: overlay-text 500ms forwards;
+            flex-direction: column;
+                @keyframes overlay-text {
+                    from{
+                        background-color: #000000;
+                        font-size: 0;
+                    }
+                    to {
+                        background-color: #000008;
+                        font-size: 10em;
+                    }
+            }
     }
-    &.visible{
-        display: flex;
-        animation: overlay-text 500ms forwards;
-        span{
-            display: block;
-        }
-    }
-    @keyframes overlay-text {
-        from{
-            background-color: #000000;
-        }
-        to {
-            background-color: #000008;
-        }
     }
 }
+
 footer{
     display: flex;
     gap: 10rem;
