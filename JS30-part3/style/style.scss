@@ -96,18 +96,18 @@ main{
                     }
                 }
             }
-            &.visible{
+            &.visible, .matched{
+                pointer-events: none;
                 .card-back{
                     transform: rotateY(-180deg);
-                    pointer-events: none;
                 }
                 .card-front{
                     transform: rotateX(0);
                 }
             }
-            &.matched{
-
-            }
+        }
+        &.clear{
+            pointer-events: none;
         }
     }
     .of-game{
