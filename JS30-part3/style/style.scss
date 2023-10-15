@@ -1,0 +1,193 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+}
+:root {
+    --main-font: 'Young Serif', serif;
+}
+
+header{
+    background-color: black;
+    padding: 1rem auto;
+    text-align: center;
+    h1{
+        color: aliceblue;
+        font-size: 3em;
+        font-family: var(--main-font);
+    }
+}
+main{
+    background-color: rgb(67, 115, 179);
+    padding-bottom: 2rem;
+    .select-buttons{
+        display: flex;
+        gap: 2rem;
+        font-family: var(--main-font);
+        position: relative;
+        top: 1rem;
+        margin-left: 43%;
+        .memory-game{
+            border: 1px solid #fff;
+            border-radius: 5%;
+            cursor: pointer;
+            background-color: #cecec0;
+            padding: auto;
+            a{
+                text-decoration: none;
+                color: rgb(4, 48, 247);
+                font-size: 1.5em;
+            }
+            &:hover{
+                opacity: 2;
+                background-color: #e47e2a;
+            }
+        }
+    }
+    .game-info{
+        font-family: var(--main-font);
+        color: #fff;
+        font-size: 2rem;
+        position: relative;
+        left: 31%;
+    }
+    .container{
+        display: grid;
+        grid-template-columns: repeat(4, auto);
+        grid-gap: 0.8rem;
+        justify-content: center;
+        margin-top: 2rem;
+        perspective: 500px;
+        .card{
+            position: relative;
+            height: 10rem;
+            width: 8rem;
+            cursor: pointer;
+            .card-face{
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                overflow: hidden;
+                backface-visibility: hidden;
+                border: solid rgb(47, 182, 137);
+                border-radius: 5%;
+                transition: transform 500ms ease-in-out;
+                .planet{
+                    align-self: flex-start;
+                    transform: translateY(10px);
+                    transition: transform 100ms ease-in-out;
+                    width: 100%;
+                    color: #fff;
+                }
+            }
+            .card-front{
+                transform: rotateY(180deg);
+                background-color: rgb(161, 71, 71);
+                border: solid black;
+            }
+            .card-back{
+                background-color: black;
+                border-color: rgb(66, 124, 105);
+                &:hover{
+                    .planet{
+                        transform: translateY(0);
+                    }
+                }
+            }
+            &.visible, .matched{
+                pointer-events: none;
+                .card-back{
+                    transform: rotateY(180deg);
+                }
+                .card-front{
+                    transform: rotateY(360deg);
+                }
+            }
+        }
+        &.clear{
+            pointer-events: none;
+        }
+    }
+    .of-game{
+        display: none;
+        position:fixed;
+        justify-content: center;
+        top: 30%;
+        left: 15%;
+        z-index: 100;
+        color: #e47e2a;
+        font-family: var(--main-font);
+        cursor: pointer;
+        &.visible{
+            display: flex;
+            animation: overlay-text 500ms forwards;
+            flex-direction: column;
+                @keyframes overlay-text {
+                    from{
+                        background-color: #000000;
+                        font-size: 0;
+                    }
+                    to {
+                        background-color: #000008;
+                        font-size: 10em;
+                    }
+            }
+    }
+    }
+}
+
+footer{
+    display: flex;
+    gap: 10rem;
+    font-family: var(--main-font);
+    align-items: center;
+    background-color: #1e4366;
+    justify-content: center;
+    height: auto;
+    a{
+        width: 5rem;
+        height: 5.5rem;
+        text-decoration: none;
+        color: #000000;
+        img{
+            width: 100%;
+            height: 70%;
+        }
+        &:hover{
+            color: #fff;
+        }
+    }
+    h4{
+        width: 2.5em;
+        &:hover{
+            color: #fff;
+        }
+    }
+}
+
+@media screen and (max-width: 600px) {
+    main{
+        .game-info{
+            top: 5%;
+        }
+        .container{
+            grid-template-columns: repeat(2, auto);
+        }
+        .of-game{
+            left: 5%;
+            top: 20%;
+            @keyframes overlay-text {
+                from{
+                    background-color: #000000;
+                    font-size: 0;
+                }
+                to {
+                    background-color: #000008;
+                    font-size: 4em;
+                }
+        }
+        }
+    }
+}

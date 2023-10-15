@@ -1,0 +1,253 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+}
+
+:root {
+  --main-font: "Young Serif", serif;
+}
+
+header {
+  background-color: black;
+  padding: 1rem auto;
+  text-align: center;
+}
+header h1 {
+  color: aliceblue;
+  font-size: 3em;
+  font-family: var(--main-font);
+}
+
+main {
+  background-color: rgb(67, 115, 179);
+  padding-bottom: 2rem;
+}
+main .select-buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 2rem;
+  font-family: var(--main-font);
+  position: relative;
+  top: 1rem;
+  margin-left: 43%;
+}
+main .select-buttons .memory-game {
+  border: 1px solid #fff;
+  border-radius: 5%;
+  cursor: pointer;
+  background-color: #cecec0;
+  padding: auto;
+}
+main .select-buttons .memory-game a {
+  text-decoration: none;
+  color: rgb(4, 48, 247);
+  font-size: 1.5em;
+}
+main .select-buttons .memory-game:hover {
+  opacity: 2;
+  background-color: #e47e2a;
+}
+main .game-info {
+  font-family: var(--main-font);
+  color: #fff;
+  font-size: 2rem;
+  position: relative;
+  left: 31%;
+}
+main .container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: auto 0.8rem auto 0.8rem auto 0.8rem auto;
+  grid-template-columns: repeat(4, auto);
+  grid-gap: 0.8rem;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 2rem;
+  -webkit-perspective: 500px;
+          perspective: 500px;
+}
+main .container .card {
+  position: relative;
+  height: 10rem;
+  width: 8rem;
+  cursor: pointer;
+}
+main .container .card .card-face {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  overflow: hidden;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  border: solid rgb(47, 182, 137);
+  border-radius: 5%;
+  -webkit-transition: -webkit-transform 500ms ease-in-out;
+  transition: -webkit-transform 500ms ease-in-out;
+  transition: transform 500ms ease-in-out;
+  transition: transform 500ms ease-in-out, -webkit-transform 500ms ease-in-out;
+}
+main .container .card .card-face .planet {
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+  -webkit-transform: translateY(10px);
+          transform: translateY(10px);
+  -webkit-transition: -webkit-transform 100ms ease-in-out;
+  transition: -webkit-transform 100ms ease-in-out;
+  transition: transform 100ms ease-in-out;
+  transition: transform 100ms ease-in-out, -webkit-transform 100ms ease-in-out;
+  width: 100%;
+  color: #fff;
+}
+main .container .card .card-front {
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
+  background-color: rgb(161, 71, 71);
+  border: solid black;
+}
+main .container .card .card-back {
+  background-color: black;
+  border-color: rgb(66, 124, 105);
+}
+main .container .card .card-back:hover .planet {
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+}
+main .container .card.visible, main .container .card .matched {
+  pointer-events: none;
+}
+main .container .card.visible .card-back, main .container .card .matched .card-back {
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
+}
+main .container .card.visible .card-front, main .container .card .matched .card-front {
+  -webkit-transform: rotateY(360deg);
+          transform: rotateY(360deg);
+}
+main .container.clear {
+  pointer-events: none;
+}
+main .of-game {
+  display: none;
+  position: fixed;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  top: 30%;
+  left: 15%;
+  z-index: 100;
+  color: #e47e2a;
+  font-family: var(--main-font);
+  cursor: pointer;
+}
+main .of-game.visible {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-animation: overlay-text 500ms forwards;
+          animation: overlay-text 500ms forwards;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+@-webkit-keyframes overlay-text {
+  from {
+    background-color: #000000;
+    font-size: 0;
+  }
+  to {
+    background-color: #000008;
+    font-size: 10em;
+  }
+}
+@keyframes overlay-text {
+  from {
+    background-color: #000000;
+    font-size: 0;
+  }
+  to {
+    background-color: #000008;
+    font-size: 10em;
+  }
+}
+
+footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 10rem;
+  font-family: var(--main-font);
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #1e4366;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: auto;
+}
+footer a {
+  width: 5rem;
+  height: 5.5rem;
+  text-decoration: none;
+  color: #000000;
+}
+footer a img {
+  width: 100%;
+  height: 70%;
+}
+footer a:hover {
+  color: #fff;
+}
+footer h4 {
+  width: 2.5em;
+}
+footer h4:hover {
+  color: #fff;
+}
+
+@media screen and (max-width: 600px) {
+  main .game-info {
+    top: 5%;
+  }
+  main .container {
+    -ms-grid-columns: auto 0.8rem auto;
+    grid-template-columns: repeat(2, auto);
+  }
+  main .of-game {
+    left: 5%;
+    top: 20%;
+  }
+  @-webkit-keyframes overlay-text {
+    from {
+      background-color: #000000;
+      font-size: 0;
+    }
+    to {
+      background-color: #000008;
+      font-size: 4em;
+    }
+  }
+  @keyframes overlay-text {
+    from {
+      background-color: #000000;
+      font-size: 0;
+    }
+    to {
+      background-color: #000008;
+      font-size: 4em;
+    }
+  }
+}
