@@ -128,12 +128,12 @@ main .container .card.visible, main .container .card .matched {
   pointer-events: none;
 }
 main .container .card.visible .card-back, main .container .card .matched .card-back {
-  -webkit-transform: rotateY(-180deg);
-          transform: rotateY(-180deg);
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
 }
 main .container .card.visible .card-front, main .container .card .matched .card-front {
-  -webkit-transform: rotateX(0);
-          transform: rotateX(0);
+  -webkit-transform: rotateY(360deg);
+          transform: rotateY(360deg);
 }
 main .container.clear {
   pointer-events: none;
@@ -219,8 +219,35 @@ footer h4:hover {
 }
 
 @media screen and (max-width: 600px) {
-  .container {
-    -ms-grid-columns: (auto)[2];
+  main .game-info {
+    top: 5%;
+  }
+  main .container {
+    -ms-grid-columns: auto 0.8rem auto;
     grid-template-columns: repeat(2, auto);
+  }
+  main .of-game {
+    left: 5%;
+    top: 20%;
+  }
+  @-webkit-keyframes overlay-text {
+    from {
+      background-color: #000000;
+      font-size: 0;
+    }
+    to {
+      background-color: #000008;
+      font-size: 4em;
+    }
+  }
+  @keyframes overlay-text {
+    from {
+      background-color: #000000;
+      font-size: 0;
+    }
+    to {
+      background-color: #000008;
+      font-size: 4em;
+    }
   }
 }

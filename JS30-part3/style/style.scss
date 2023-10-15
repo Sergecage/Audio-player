@@ -99,10 +99,10 @@ main{
             &.visible, .matched{
                 pointer-events: none;
                 .card-back{
-                    transform: rotateY(-180deg);
+                    transform: rotateY(180deg);
                 }
                 .card-front{
-                    transform: rotateX(0);
+                    transform: rotateY(360deg);
                 }
             }
         }
@@ -168,7 +168,26 @@ footer{
 }
 
 @media screen and (max-width: 600px) {
-    .container{
-        grid-template-columns: repeat(2, auto);
+    main{
+        .game-info{
+            top: 5%;
+        }
+        .container{
+            grid-template-columns: repeat(2, auto);
+        }
+        .of-game{
+            left: 5%;
+            top: 20%;
+            @keyframes overlay-text {
+                from{
+                    background-color: #000000;
+                    font-size: 0;
+                }
+                to {
+                    background-color: #000008;
+                    font-size: 4em;
+                }
+        }
+        }
     }
 }

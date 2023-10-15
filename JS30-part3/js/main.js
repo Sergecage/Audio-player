@@ -1,10 +1,12 @@
 const container = document.querySelector('.container');
 const newGame = document.querySelector('.of-game');
-//const cards = Array.from(document.querySelector('.card'));
+const endGame = document.querySelector('#end-game');
 const info = document.querySelector('.game-info');
 const flips = document.querySelector('#flips');
+let gameResults = [];
+localStorage.setItem("results", JSON.stringify(true));
 
-//mix card's order
+
 class SaveGame {
     constructor() {
         this.container = container;
@@ -12,36 +14,44 @@ class SaveGame {
         this.flips = flips;
         this.delay = 1000;
         this.cardMatched = [];
+        this.totalFlips = 0;
     }
+    //mix card's order
     mixCards() {
         this.cards.forEach(el => {
-            const randomOrder = Math.floor(Math.random() * cards.length) + 1;
+            const randomOrder = Math.floor(Math.random() * this.cards.length) + 1;
             el.classList.remove('matched');
     
             setTimeout(() => {
                 el.style.order = `${randomOrder}`;
             }, 400);
-        });
+        })
     }
-
+    //check if the cards are matched
     checkCard() {
         const [firstCard, secondCard] = this.cardMatched;
 
         this.container.classList.add('clear');
         if(firstCard.dataset.emoji === secondCard.dataset.emoji) {
-            firstCard.classList.replace('visible', 'matched');
-            secondCard.classList.replace('visible', 'matched');
+            firstCard.classList.add('matched');
+            secondCard.classList.add('matched');
 
             this.cardMatched = [];
 
             setTimeout(() => {
-                const perfectMatch = this.cards.every(ele => (
-                    ele.classList.contains('matched')
+                const perfectMatch = this.cards.every(el => (
+                    el.classList.contains('matched')
                 ));
 
                 this.container.classList.remove('clear');
 
+                //end of game
                 if(perfectMatch) {
+                    this.cards.forEach(el => {
+                        el.classList.remove('visible');
+                    })
+                    endGame.classList.add('visible');
+                    this.totalFlips = 0;
                     this.mixCards();
                 }
             }, this.delay);
@@ -57,36 +67,17 @@ class SaveGame {
             }, this.delay);
         }
     }
+    //flip the card
     flipCard(card){
         card.classList.add('visible');
         this.cardMatched.push(card);
-
+        this.totalFlips++;
+        this.flips.innerHTML =this.totalFlips;
         if (this.cardMatched.length === 2) {
             this.checkCard();
         }
-        /*this.checkCard(card)
-            this.totalFlips++;
-            this.flips.innerText =this.totalFlips;*/
 
     }
-    /*startGame()  {
-        this.cardCheck = null;
-        this.totalFlips = 0;
-        this.cardMatched = [];
-        this.busy = true;
-        //this.flipTimes = ;
-    }
-    flipCard(card) {
-        if(this.checkFlip(card)){
-            this.totalFlips++;
-            this.flips.innerText =this.totalFlips;
-            card.classList.add('visible');
-        }
-    }
-    checkFlip(card) {
-        return true;
-        //return !this.busy && !this.cardMatched.includes(card) && card !==this.cardCheck;
-    }*/
 
 };
 
@@ -98,20 +89,9 @@ game.cards.forEach(el => {
 
 //onload page
 const onLoad = () => {    
-    //let game = new SaveGame(100, cards);
-    
-    
-    //newGame.forEach(ele => {
         newGame.addEventListener('click', () => {
         newGame.classList.remove('visible');
-        // game.startGame();
      });
-   // });
-    /*cards.forEach(el => {
-        el.addEventListener('click', () => {
-            game.flipCard(card);
-        });
-    });*/
 };
 
 if(document.readyState === 'loading') {
@@ -119,3 +99,7 @@ if(document.readyState === 'loading') {
 } else {
     onLoad();
 };
+
+endGame.addEventListener('click', () => {
+    endGame.classList.remove('visible');
+ });
